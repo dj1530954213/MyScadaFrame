@@ -337,7 +337,7 @@ namespace ScadaFrame
                             }
                         }
                     }
-                    Thread.Sleep(2000);
+                    Thread.Sleep(this.PollTime);
                 }
             });
         }

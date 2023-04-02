@@ -354,8 +354,8 @@ namespace ScadaFrame
             // uiSplitContainer1.Panel2
             // 
             this.uiSplitContainer1.Panel2.Controls.Add(this.uiSplitContainer2);
-            this.uiSplitContainer1.Size = new System.Drawing.Size(2056, 1068);
-            this.uiSplitContainer1.SplitterDistance = 194;
+            this.uiSplitContainer1.Size = new System.Drawing.Size(2069, 1074);
+            this.uiSplitContainer1.SplitterDistance = 195;
             this.uiSplitContainer1.SplitterWidth = 15;
             this.uiSplitContainer1.TabIndex = 0;
             this.uiSplitContainer1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -391,7 +391,7 @@ namespace ScadaFrame
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(194, 1002);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(195, 1008);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // bt_Page_Permission
@@ -407,7 +407,7 @@ namespace ScadaFrame
             this.bt_Page_Permission.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_Permission.Name = "bt_Page_Permission";
             this.bt_Page_Permission.Radius = 50;
-            this.bt_Page_Permission.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_Permission.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_Permission.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_Permission.Symbol = 61447;
             this.bt_Page_Permission.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -430,7 +430,7 @@ namespace ScadaFrame
             this.bt_Page_DB.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_DB.Name = "bt_Page_DB";
             this.bt_Page_DB.Radius = 50;
-            this.bt_Page_DB.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_DB.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_DB.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_DB.Symbol = 57381;
             this.bt_Page_DB.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -453,7 +453,7 @@ namespace ScadaFrame
             this.bt_Page_Connection.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_Connection.Name = "bt_Page_Connection";
             this.bt_Page_Connection.Radius = 50;
-            this.bt_Page_Connection.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_Connection.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_Connection.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_Connection.Symbol = 62059;
             this.bt_Page_Connection.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -476,7 +476,7 @@ namespace ScadaFrame
             this.bt_Page_Log.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_Log.Name = "bt_Page_Log";
             this.bt_Page_Log.Radius = 50;
-            this.bt_Page_Log.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_Log.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_Log.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_Log.Symbol = 362938;
             this.bt_Page_Log.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -499,7 +499,7 @@ namespace ScadaFrame
             this.bt_Page_IO.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_IO.Name = "bt_Page_IO";
             this.bt_Page_IO.Radius = 50;
-            this.bt_Page_IO.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_IO.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_IO.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_IO.Symbol = 62070;
             this.bt_Page_IO.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -522,7 +522,7 @@ namespace ScadaFrame
             this.bt_PageAlarm.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PageAlarm.Name = "bt_PageAlarm";
             this.bt_PageAlarm.Radius = 50;
-            this.bt_PageAlarm.Size = new System.Drawing.Size(186, 92);
+            this.bt_PageAlarm.Size = new System.Drawing.Size(187, 92);
             this.bt_PageAlarm.Style = Sunny.UI.UIStyle.Custom;
             this.bt_PageAlarm.Symbol = 61601;
             this.bt_PageAlarm.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -545,7 +545,7 @@ namespace ScadaFrame
             this.bt_Page_CurveNow.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_CurveNow.Name = "bt_Page_CurveNow";
             this.bt_Page_CurveNow.Radius = 50;
-            this.bt_Page_CurveNow.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_CurveNow.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_CurveNow.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_CurveNow.Symbol = 61953;
             this.bt_Page_CurveNow.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -568,7 +568,7 @@ namespace ScadaFrame
             this.bt_Page_CurveHistroy.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_CurveHistroy.Name = "bt_Page_CurveHistroy";
             this.bt_Page_CurveHistroy.Radius = 50;
-            this.bt_Page_CurveHistroy.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_CurveHistroy.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_CurveHistroy.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_CurveHistroy.Symbol = 61952;
             this.bt_Page_CurveHistroy.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -591,7 +591,7 @@ namespace ScadaFrame
             this.bt_Page_Report.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_Report.Name = "bt_Page_Report";
             this.bt_Page_Report.Radius = 50;
-            this.bt_Page_Report.Size = new System.Drawing.Size(186, 94);
+            this.bt_Page_Report.Size = new System.Drawing.Size(187, 100);
             this.bt_Page_Report.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_Report.Symbol = 61889;
             this.bt_Page_Report.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -615,7 +615,7 @@ namespace ScadaFrame
             this.bt_Page_Flow.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Page_Flow.Name = "bt_Page_Flow";
             this.bt_Page_Flow.Radius = 50;
-            this.bt_Page_Flow.Size = new System.Drawing.Size(186, 92);
+            this.bt_Page_Flow.Size = new System.Drawing.Size(187, 92);
             this.bt_Page_Flow.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Page_Flow.Symbol = 57602;
             this.bt_Page_Flow.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -669,7 +669,7 @@ namespace ScadaFrame
             this.uiMarkLabel1.MarkPos = Sunny.UI.UIMarkLabel.UIMarkPos.Bottom;
             this.uiMarkLabel1.Name = "uiMarkLabel1";
             this.uiMarkLabel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
-            this.uiMarkLabel1.Size = new System.Drawing.Size(194, 66);
+            this.uiMarkLabel1.Size = new System.Drawing.Size(195, 66);
             this.uiMarkLabel1.TabIndex = 0;
             this.uiMarkLabel1.Text = "SCADA通用框架";
             this.uiMarkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -694,8 +694,8 @@ namespace ScadaFrame
             // 
             this.uiSplitContainer2.Panel2.Controls.Add(this.tableLayoutPanel20);
             this.uiSplitContainer2.Panel2.Controls.Add(this.uiDataGridView2);
-            this.uiSplitContainer2.Size = new System.Drawing.Size(1847, 1068);
-            this.uiSplitContainer2.SplitterDistance = 828;
+            this.uiSplitContainer2.Size = new System.Drawing.Size(1859, 1074);
+            this.uiSplitContainer2.SplitterDistance = 832;
             this.uiSplitContainer2.SplitterWidth = 14;
             this.uiSplitContainer2.TabIndex = 0;
             this.uiSplitContainer2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -727,7 +727,7 @@ namespace ScadaFrame
             this.uiTabControlMenu.Name = "uiTabControlMenu";
             this.uiTabControlMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.uiTabControlMenu.SelectedIndex = 0;
-            this.uiTabControlMenu.Size = new System.Drawing.Size(1847, 828);
+            this.uiTabControlMenu.Size = new System.Drawing.Size(1859, 832);
             this.uiTabControlMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControlMenu.Style = Sunny.UI.UIStyle.Custom;
             this.uiTabControlMenu.TabIndex = 4;
@@ -741,7 +741,7 @@ namespace ScadaFrame
             this.tabPageMain.Location = new System.Drawing.Point(0, 40);
             this.tabPageMain.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageMain.Name = "tabPageMain";
-            this.tabPageMain.Size = new System.Drawing.Size(1847, 788);
+            this.tabPageMain.Size = new System.Drawing.Size(1859, 792);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "0";
             this.tabPageMain.UseVisualStyleBackColor = true;
@@ -2544,7 +2544,7 @@ namespace ScadaFrame
             this.tabPageAlarm.Location = new System.Drawing.Point(0, 40);
             this.tabPageAlarm.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageAlarm.Name = "tabPageAlarm";
-            this.tabPageAlarm.Size = new System.Drawing.Size(1847, 788);
+            this.tabPageAlarm.Size = new System.Drawing.Size(1859, 792);
             this.tabPageAlarm.TabIndex = 5;
             this.tabPageAlarm.Text = "5";
             this.tabPageAlarm.UseVisualStyleBackColor = true;
@@ -2562,7 +2562,7 @@ namespace ScadaFrame
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1847, 788);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1859, 792);
             this.tableLayoutPanel18.TabIndex = 0;
             // 
             // tableLayoutPanel19
@@ -2590,7 +2590,7 @@ namespace ScadaFrame
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(1841, 49);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(1853, 49);
             this.tableLayoutPanel19.TabIndex = 1;
             // 
             // DTP_AlarmStopTime
@@ -2598,14 +2598,14 @@ namespace ScadaFrame
             this.DTP_AlarmStopTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DTP_AlarmStopTime.FillColor = System.Drawing.Color.White;
             this.DTP_AlarmStopTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DTP_AlarmStopTime.Location = new System.Drawing.Point(694, 5);
+            this.DTP_AlarmStopTime.Location = new System.Drawing.Point(697, 5);
             this.DTP_AlarmStopTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DTP_AlarmStopTime.MaxLength = 19;
             this.DTP_AlarmStopTime.MinimumSize = new System.Drawing.Size(63, 0);
             this.DTP_AlarmStopTime.Name = "DTP_AlarmStopTime";
             this.DTP_AlarmStopTime.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.DTP_AlarmStopTime.RectColor = System.Drawing.Color.Silver;
-            this.DTP_AlarmStopTime.Size = new System.Drawing.Size(222, 39);
+            this.DTP_AlarmStopTime.Size = new System.Drawing.Size(223, 39);
             this.DTP_AlarmStopTime.Style = Sunny.UI.UIStyle.Custom;
             this.DTP_AlarmStopTime.SymbolDropDown = 61555;
             this.DTP_AlarmStopTime.SymbolNormal = 61555;
@@ -2624,12 +2624,12 @@ namespace ScadaFrame
             this.bt_AlarmRangeQuery.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_AlarmRangeQuery.FillColorGradient = true;
             this.bt_AlarmRangeQuery.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_AlarmRangeQuery.Location = new System.Drawing.Point(1154, 4);
+            this.bt_AlarmRangeQuery.Location = new System.Drawing.Point(1159, 4);
             this.bt_AlarmRangeQuery.Margin = new System.Windows.Forms.Padding(4);
             this.bt_AlarmRangeQuery.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_AlarmRangeQuery.Name = "bt_AlarmRangeQuery";
             this.bt_AlarmRangeQuery.Radius = 15;
-            this.bt_AlarmRangeQuery.Size = new System.Drawing.Size(222, 41);
+            this.bt_AlarmRangeQuery.Size = new System.Drawing.Size(223, 41);
             this.bt_AlarmRangeQuery.Style = Sunny.UI.UIStyle.Custom;
             this.bt_AlarmRangeQuery.Symbol = 57602;
             this.bt_AlarmRangeQuery.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2643,11 +2643,11 @@ namespace ScadaFrame
             // 
             this.uiSymbolLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiSymbolLabel2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(463, 3);
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(465, 3);
             this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel2.Name = "uiSymbolLabel2";
             this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.uiSymbolLabel2.Size = new System.Drawing.Size(224, 43);
+            this.uiSymbolLabel2.Size = new System.Drawing.Size(225, 43);
             this.uiSymbolLabel2.Symbol = 62033;
             this.uiSymbolLabel2.SymbolSize = 35;
             this.uiSymbolLabel2.TabIndex = 1;
@@ -2659,14 +2659,14 @@ namespace ScadaFrame
             this.DTP_AlarmStartTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DTP_AlarmStartTime.FillColor = System.Drawing.Color.White;
             this.DTP_AlarmStartTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DTP_AlarmStartTime.Location = new System.Drawing.Point(234, 5);
+            this.DTP_AlarmStartTime.Location = new System.Drawing.Point(235, 5);
             this.DTP_AlarmStartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DTP_AlarmStartTime.MaxLength = 19;
             this.DTP_AlarmStartTime.MinimumSize = new System.Drawing.Size(63, 0);
             this.DTP_AlarmStartTime.Name = "DTP_AlarmStartTime";
             this.DTP_AlarmStartTime.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.DTP_AlarmStartTime.RectColor = System.Drawing.Color.Silver;
-            this.DTP_AlarmStartTime.Size = new System.Drawing.Size(222, 39);
+            this.DTP_AlarmStartTime.Size = new System.Drawing.Size(223, 39);
             this.DTP_AlarmStartTime.Style = Sunny.UI.UIStyle.Custom;
             this.DTP_AlarmStartTime.SymbolDropDown = 61555;
             this.DTP_AlarmStartTime.SymbolNormal = 61555;
@@ -2683,12 +2683,12 @@ namespace ScadaFrame
             this.uiComboBox_AlarmType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiComboBox_AlarmType.FillColor = System.Drawing.Color.White;
             this.uiComboBox_AlarmType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiComboBox_AlarmType.Location = new System.Drawing.Point(924, 5);
+            this.uiComboBox_AlarmType.Location = new System.Drawing.Point(928, 5);
             this.uiComboBox_AlarmType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiComboBox_AlarmType.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboBox_AlarmType.Name = "uiComboBox_AlarmType";
             this.uiComboBox_AlarmType.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox_AlarmType.Size = new System.Drawing.Size(222, 39);
+            this.uiComboBox_AlarmType.Size = new System.Drawing.Size(223, 39);
             this.uiComboBox_AlarmType.TabIndex = 4;
             this.uiComboBox_AlarmType.Text = "uiComboBox1";
             this.uiComboBox_AlarmType.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2703,12 +2703,12 @@ namespace ScadaFrame
             this.bt_AlarmTodayQuery.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_AlarmTodayQuery.FillColorGradient = true;
             this.bt_AlarmTodayQuery.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_AlarmTodayQuery.Location = new System.Drawing.Point(1384, 4);
+            this.bt_AlarmTodayQuery.Location = new System.Drawing.Point(1390, 4);
             this.bt_AlarmTodayQuery.Margin = new System.Windows.Forms.Padding(4);
             this.bt_AlarmTodayQuery.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_AlarmTodayQuery.Name = "bt_AlarmTodayQuery";
             this.bt_AlarmTodayQuery.Radius = 15;
-            this.bt_AlarmTodayQuery.Size = new System.Drawing.Size(222, 41);
+            this.bt_AlarmTodayQuery.Size = new System.Drawing.Size(223, 41);
             this.bt_AlarmTodayQuery.Style = Sunny.UI.UIStyle.Custom;
             this.bt_AlarmTodayQuery.Symbol = 57602;
             this.bt_AlarmTodayQuery.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2726,12 +2726,12 @@ namespace ScadaFrame
             this.bt_AlarmExpert.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_AlarmExpert.FillColorGradient = true;
             this.bt_AlarmExpert.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_AlarmExpert.Location = new System.Drawing.Point(1614, 4);
+            this.bt_AlarmExpert.Location = new System.Drawing.Point(1621, 4);
             this.bt_AlarmExpert.Margin = new System.Windows.Forms.Padding(4);
             this.bt_AlarmExpert.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_AlarmExpert.Name = "bt_AlarmExpert";
             this.bt_AlarmExpert.Radius = 15;
-            this.bt_AlarmExpert.Size = new System.Drawing.Size(223, 41);
+            this.bt_AlarmExpert.Size = new System.Drawing.Size(228, 41);
             this.bt_AlarmExpert.Style = Sunny.UI.UIStyle.Custom;
             this.bt_AlarmExpert.Symbol = 57602;
             this.bt_AlarmExpert.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2751,7 +2751,7 @@ namespace ScadaFrame
             this.uiSymbolLabel1.Name = "uiSymbolLabel1";
             this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
             this.uiSymbolLabel1.Radius = 50;
-            this.uiSymbolLabel1.Size = new System.Drawing.Size(224, 43);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(225, 43);
             this.uiSymbolLabel1.Symbol = 62033;
             this.uiSymbolLabel1.SymbolSize = 35;
             this.uiSymbolLabel1.TabIndex = 1;
@@ -2819,7 +2819,7 @@ namespace ScadaFrame
             this.uiDataGridViewAlarmHistory.RowTemplate.Height = 23;
             this.uiDataGridViewAlarmHistory.SelectedIndex = -1;
             this.uiDataGridViewAlarmHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiDataGridViewAlarmHistory.Size = new System.Drawing.Size(1841, 727);
+            this.uiDataGridViewAlarmHistory.Size = new System.Drawing.Size(1853, 731);
             this.uiDataGridViewAlarmHistory.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridViewAlarmHistory.TabIndex = 2;
             this.uiDataGridViewAlarmHistory.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -2885,7 +2885,7 @@ namespace ScadaFrame
             this.tabPageLog.Location = new System.Drawing.Point(0, 40);
             this.tabPageLog.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageLog.Name = "tabPageLog";
-            this.tabPageLog.Size = new System.Drawing.Size(1847, 788);
+            this.tabPageLog.Size = new System.Drawing.Size(200, 60);
             this.tabPageLog.TabIndex = 6;
             this.tabPageLog.Text = "6";
             this.tabPageLog.UseVisualStyleBackColor = true;
@@ -2898,7 +2898,7 @@ namespace ScadaFrame
             this.tabPageDataBase.Location = new System.Drawing.Point(0, 40);
             this.tabPageDataBase.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDataBase.Name = "tabPageDataBase";
-            this.tabPageDataBase.Size = new System.Drawing.Size(1847, 788);
+            this.tabPageDataBase.Size = new System.Drawing.Size(200, 60);
             this.tabPageDataBase.TabIndex = 7;
             this.tabPageDataBase.Text = "7";
             this.tabPageDataBase.UseVisualStyleBackColor = true;
@@ -2916,7 +2916,7 @@ namespace ScadaFrame
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1550, 788);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(0, 60);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // uiDataGridViewDB
@@ -2987,7 +2987,7 @@ namespace ScadaFrame
             this.uiDataGridViewDB.ScrollBarColor = System.Drawing.Color.Gray;
             this.uiDataGridViewDB.SelectedIndex = -1;
             this.uiDataGridViewDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiDataGridViewDB.Size = new System.Drawing.Size(1542, 780);
+            this.uiDataGridViewDB.Size = new System.Drawing.Size(1, 52);
             this.uiDataGridViewDB.Style = Sunny.UI.UIStyle.Custom;
             this.uiDataGridViewDB.TabIndex = 0;
             this.uiDataGridViewDB.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -3144,9 +3144,9 @@ namespace ScadaFrame
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1550, 0);
+            this.panel1.Location = new System.Drawing.Point(-97, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 788);
+            this.panel1.Size = new System.Drawing.Size(297, 60);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -3162,7 +3162,7 @@ namespace ScadaFrame
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(297, 788);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(297, 60);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // uiGroupBox1
@@ -3177,7 +3177,7 @@ namespace ScadaFrame
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 58, 0, 0);
             this.uiGroupBox1.Radius = 45;
-            this.uiGroupBox1.Size = new System.Drawing.Size(289, 305);
+            this.uiGroupBox1.Size = new System.Drawing.Size(289, 14);
             this.uiGroupBox1.TabIndex = 11;
             this.uiGroupBox1.Text = "点表文件操作";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3205,7 +3205,7 @@ namespace ScadaFrame
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(289, 247);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(289, 0);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // bt_PointConfig_Input
@@ -3214,12 +3214,12 @@ namespace ScadaFrame
             this.bt_PointConfig_Input.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_Input.FillColorGradient = true;
             this.bt_PointConfig_Input.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_Input.Location = new System.Drawing.Point(61, 10);
+            this.bt_PointConfig_Input.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_Input.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_Input.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_Input.Name = "bt_PointConfig_Input";
             this.bt_PointConfig_Input.Radius = 50;
-            this.bt_PointConfig_Input.Size = new System.Drawing.Size(165, 66);
+            this.bt_PointConfig_Input.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_Input.Symbol = 61564;
             this.bt_PointConfig_Input.TabIndex = 2;
             this.bt_PointConfig_Input.Text = "导入点表";
@@ -3233,12 +3233,12 @@ namespace ScadaFrame
             this.bt_PointConfig_Backup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_Backup.FillColorGradient = true;
             this.bt_PointConfig_Backup.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_Backup.Location = new System.Drawing.Point(61, 170);
+            this.bt_PointConfig_Backup.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_Backup.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_Backup.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_Backup.Name = "bt_PointConfig_Backup";
             this.bt_PointConfig_Backup.Radius = 50;
-            this.bt_PointConfig_Backup.Size = new System.Drawing.Size(165, 66);
+            this.bt_PointConfig_Backup.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_Backup.Symbol = 61579;
             this.bt_PointConfig_Backup.TabIndex = 2;
             this.bt_PointConfig_Backup.Text = "备份点表";
@@ -3252,12 +3252,12 @@ namespace ScadaFrame
             this.bt_PointConfig_Save.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_Save.FillColorGradient = true;
             this.bt_PointConfig_Save.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_Save.Location = new System.Drawing.Point(61, 90);
+            this.bt_PointConfig_Save.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_Save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_Save.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_Save.Name = "bt_PointConfig_Save";
             this.bt_PointConfig_Save.Radius = 50;
-            this.bt_PointConfig_Save.Size = new System.Drawing.Size(165, 66);
+            this.bt_PointConfig_Save.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_Save.Symbol = 61639;
             this.bt_PointConfig_Save.TabIndex = 2;
             this.bt_PointConfig_Save.Text = "保存点表";
@@ -3271,13 +3271,13 @@ namespace ScadaFrame
             this.uiGroupBox2.Controls.Add(this.tableLayoutPanel7);
             this.uiGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox2.Location = new System.Drawing.Point(4, 320);
+            this.uiGroupBox2.Location = new System.Drawing.Point(4, 29);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 58, 0, 0);
             this.uiGroupBox2.Radius = 50;
-            this.uiGroupBox2.Size = new System.Drawing.Size(289, 226);
+            this.uiGroupBox2.Size = new System.Drawing.Size(289, 8);
             this.uiGroupBox2.TabIndex = 10;
             this.uiGroupBox2.Text = "在线修改及监控";
             this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3302,7 +3302,7 @@ namespace ScadaFrame
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(289, 168);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(289, 0);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // bt_PointConfig_OnlineChange
@@ -3311,12 +3311,12 @@ namespace ScadaFrame
             this.bt_PointConfig_OnlineChange.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_OnlineChange.FillColorGradient = true;
             this.bt_PointConfig_OnlineChange.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_OnlineChange.Location = new System.Drawing.Point(61, 91);
+            this.bt_PointConfig_OnlineChange.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_OnlineChange.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_OnlineChange.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_OnlineChange.Name = "bt_PointConfig_OnlineChange";
             this.bt_PointConfig_OnlineChange.Radius = 50;
-            this.bt_PointConfig_OnlineChange.Size = new System.Drawing.Size(165, 63);
+            this.bt_PointConfig_OnlineChange.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_OnlineChange.Symbol = 61564;
             this.bt_PointConfig_OnlineChange.TabIndex = 2;
             this.bt_PointConfig_OnlineChange.Text = "在线应用";
@@ -3329,12 +3329,12 @@ namespace ScadaFrame
             this.bt_PointConfig_ShowPV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_ShowPV.FillColorGradient = true;
             this.bt_PointConfig_ShowPV.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_ShowPV.Location = new System.Drawing.Point(61, 12);
+            this.bt_PointConfig_ShowPV.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_ShowPV.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_ShowPV.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_ShowPV.Name = "bt_PointConfig_ShowPV";
             this.bt_PointConfig_ShowPV.Radius = 50;
-            this.bt_PointConfig_ShowPV.Size = new System.Drawing.Size(165, 63);
+            this.bt_PointConfig_ShowPV.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_ShowPV.Symbol = 61564;
             this.bt_PointConfig_ShowPV.TabIndex = 2;
             this.bt_PointConfig_ShowPV.Text = "显示实时数值";
@@ -3357,13 +3357,13 @@ namespace ScadaFrame
             this.tableLayoutPanelDB.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanelDB.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanelDB.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanelDB.Size = new System.Drawing.Size(1676, 728);
+            this.tableLayoutPanelDB.Size = new System.Drawing.Size(29, 0);
             this.tableLayoutPanelDB.TabIndex = 0;
             // 
             // uiPagination1
             // 
             this.uiPagination1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPagination1.Location = new System.Drawing.Point(5, 697);
+            this.uiPagination1.Location = new System.Drawing.Point(5, 6);
             this.uiPagination1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.uiPagination1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPagination1.Name = "uiPagination1";
@@ -3381,12 +3381,12 @@ namespace ScadaFrame
             this.uiDataGridViewFooter1.DataGridView = null;
             this.uiDataGridViewFooter1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridViewFooter1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridViewFooter1.Location = new System.Drawing.Point(4, 659);
+            this.uiDataGridViewFooter1.Location = new System.Drawing.Point(4, 4);
             this.uiDataGridViewFooter1.Margin = new System.Windows.Forms.Padding(4);
             this.uiDataGridViewFooter1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiDataGridViewFooter1.Name = "uiDataGridViewFooter1";
             this.uiDataGridViewFooter1.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
-            this.uiDataGridViewFooter1.Size = new System.Drawing.Size(1668, 28);
+            this.uiDataGridViewFooter1.Size = new System.Drawing.Size(21, 1);
             this.uiDataGridViewFooter1.TabIndex = 1;
             this.uiDataGridViewFooter1.Text = "uiDataGridViewFooter1";
             this.uiDataGridViewFooter1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -3486,7 +3486,7 @@ namespace ScadaFrame
             this.tableLayoutPanel20.RowCount = 2;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(1847, 226);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(1859, 228);
             this.tableLayoutPanel20.TabIndex = 1;
             // 
             // uiDataGridViewActualAlarm
@@ -3558,7 +3558,7 @@ namespace ScadaFrame
             this.uiDataGridViewActualAlarm.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.uiDataGridViewActualAlarm.SelectedIndex = -1;
             this.uiDataGridViewActualAlarm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiDataGridViewActualAlarm.Size = new System.Drawing.Size(1841, 181);
+            this.uiDataGridViewActualAlarm.Size = new System.Drawing.Size(1853, 183);
             this.uiDataGridViewActualAlarm.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiDataGridViewActualAlarm.Style = Sunny.UI.UIStyle.LayuiGreen;
             this.uiDataGridViewActualAlarm.TabIndex = 1;
@@ -3660,7 +3660,7 @@ namespace ScadaFrame
             this.uiPaginationActualAlarm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiPaginationActualAlarm.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiPaginationActualAlarm.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPaginationActualAlarm.Location = new System.Drawing.Point(2, 190);
+            this.uiPaginationActualAlarm.Location = new System.Drawing.Point(2, 192);
             this.uiPaginationActualAlarm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.uiPaginationActualAlarm.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPaginationActualAlarm.Name = "uiPaginationActualAlarm";
@@ -3670,7 +3670,7 @@ namespace ScadaFrame
             this.uiPaginationActualAlarm.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
             this.uiPaginationActualAlarm.ShowJumpButton = false;
             this.uiPaginationActualAlarm.ShowText = false;
-            this.uiPaginationActualAlarm.Size = new System.Drawing.Size(1843, 33);
+            this.uiPaginationActualAlarm.Size = new System.Drawing.Size(1855, 33);
             this.uiPaginationActualAlarm.Style = Sunny.UI.UIStyle.LayuiGreen;
             this.uiPaginationActualAlarm.TabIndex = 0;
             this.uiPaginationActualAlarm.Text = "uiPagination4";
@@ -3722,7 +3722,7 @@ namespace ScadaFrame
             this.uiDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.uiDataGridView2.RowTemplate.Height = 23;
             this.uiDataGridView2.SelectedIndex = -1;
-            this.uiDataGridView2.Size = new System.Drawing.Size(1847, 226);
+            this.uiDataGridView2.Size = new System.Drawing.Size(1859, 228);
             this.uiDataGridView2.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridView2.TabIndex = 0;
             this.uiDataGridView2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -3777,7 +3777,7 @@ namespace ScadaFrame
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(2056, 1068);
+            this.ClientSize = new System.Drawing.Size(2069, 1074);
             this.Controls.Add(this.uiSplitContainer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
