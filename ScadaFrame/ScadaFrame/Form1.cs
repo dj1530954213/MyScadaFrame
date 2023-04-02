@@ -159,7 +159,7 @@ namespace ScadaFrame
             #endregion
             #region 报警处理
             AlarmRecode();
-            //先执行一次次函数已初始化实时报警表
+            //先执行一次此函数以初始化实时报警表
             ActualAlarmQuery();
             #endregion
         }
@@ -1098,6 +1098,7 @@ namespace ScadaFrame
 
         #endregion
 
+        #region 历史报警记录处理
         private void bt_AlarmRangeQuery_Click(object sender, EventArgs e)
         {
             int index = 1;
@@ -1149,7 +1150,32 @@ namespace ScadaFrame
 
         private void bt_AlarmExpert_Click(object sender, EventArgs e)
         {
-
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            StringBuilder builderWriteLine = new StringBuilder();
+            saveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog.Filter = "CSV文件|*.csv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter stream = new StreamWriter(saveFileDialog.FileName, false, Encoding.Default);//写入表头
+                for (int i = 0; i < uiDataGridViewAlarmHistory.Rows[0].Cells.Count; i++)
+                {
+                    builderWriteLine.Append($"{uiDataGridViewAlarmHistory.Columns[i].HeaderText.ToString()},");
+                }
+                stream.WriteLine(builderWriteLine.ToString());
+                for (int i = 0; i < uiDataGridViewAlarmHistory.Rows.Count-1; i++)//写入内容
+                {
+                    builderWriteLine.Clear();
+                    for (int j = 0; j < uiDataGridViewAlarmHistory.Rows[i].Cells.Count; j++)
+                    {
+                        builderWriteLine.Append($"{uiDataGridViewAlarmHistory.Rows[i].Cells[j].Value.ToString()},");
+                    }
+                    stream.WriteLine(builderWriteLine.ToString());
+                }
+                stream.Flush();
+                stream.Close();
+                messageBox.ShowSuccessDialog("报警记录导出成功");
+            }
         }
+        #endregion
     }
 }

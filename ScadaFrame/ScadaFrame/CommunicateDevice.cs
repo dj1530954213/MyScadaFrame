@@ -87,8 +87,13 @@ namespace ScadaFrame
         {
             
         }
+        /// <summary>
+        /// alarm处理函数供form内循环调用
+        /// </summary>
+        /// <param name="sqlhandle"></param>
         public void AlarmHandle(sqlhandle sqlhandle)
         {
+            scanDeviceManualResetEvent.WaitOne();
             foreach (var item in PointDictionary)
             {
                 if (item.Value.alarmEnable && !(item.Value.value is null))//如果报警启用  值存在
