@@ -912,11 +912,11 @@ namespace ScadaFrame
                 pointPare.describe = uiDataGridViewDB.Rows[i].Cells[4].Value.ToString();
                 deviceDictionary[uiDataGridViewDB.Rows[i].Cells[1].Value.ToString()].PointDictionary.Add(uiDataGridViewDB.Rows[i].Cells[0].Value.ToString(), pointPare);
             }
-            //将所有要读取的点位方法注册至委托上
-            foreach (var item in deviceDictionary)
-            {
-                item.Value.PointReadHandle();
-            }
+            ////将所有要读取的点位方法注册至委托上
+            //foreach (var item in deviceDictionary)
+            //{
+            //    item.Value.PointReadHandle();
+            //}
         }
         /// <summary>
         /// 为每个设备开启一个线程来读取数据
