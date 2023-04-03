@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScadaFrame", "ScadaFrame\ScadaFrame.csproj", "{F0F251C9-8F9E-4E0C-A8ED-6CF6FB9C19FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{B2E9A192-E861-498F-9C87-860F4D72209D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{B2E9A192-E861-498F-9C87-860F4D72209D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCommunicationDemo", "ABCommunicationDemo\ABCommunicationDemo.csproj", "{F40F5E4C-D746-4ECA-84CE-62EDEB1A399F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B2E9A192-E861-498F-9C87-860F4D72209D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2E9A192-E861-498F-9C87-860F4D72209D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2E9A192-E861-498F-9C87-860F4D72209D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40F5E4C-D746-4ECA-84CE-62EDEB1A399F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40F5E4C-D746-4ECA-84CE-62EDEB1A399F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40F5E4C-D746-4ECA-84CE-62EDEB1A399F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40F5E4C-D746-4ECA-84CE-62EDEB1A399F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

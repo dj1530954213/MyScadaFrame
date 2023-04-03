@@ -1,0 +1,14 @@
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\bin\Debug\ABCommunicationDemo.exe.config
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\bin\Debug\ABCommunicationDemo.exe
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\bin\Debug\ABCommunicationDemo.pdb
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\bin\Debug\HslCommunication.dll
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\bin\Debug\Newtonsoft.Json.dll
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\bin\Debug\HslCommunication.xml
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.csproj.AssemblyReference.cache
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.Form1.resources
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.Properties.Resources.resources
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.csproj.GenerateResource.cache
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.csproj.CoreCompileInputs.cache
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.csproj.CopyComplete
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.exe
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ABCommunicationDemo\obj\Debug\ABCommunicationDemo.pdb

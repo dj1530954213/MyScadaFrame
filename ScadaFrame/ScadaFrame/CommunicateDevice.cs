@@ -20,10 +20,34 @@ namespace ScadaFrame
             this.ConnectTag = connectTag;
         }
         public abstract bool State { get; }
-        public abstract string ConnectTag { get; set; }
-        public abstract bool AutoConnect { get; set; }
-        public abstract bool Reconnect { get; set; }
-        public abstract int PollTime { get; set; }
+        private bool _autoConnect;
+        public bool AutoConnect
+        {
+            get { return _autoConnect; }
+            set { _autoConnect = value; }
+        }
+
+        private bool _reconnect;
+        public bool Reconnect
+        {
+            get { return _reconnect; }
+            set { _reconnect = value; }
+        }
+
+        private int _pollTime;
+        public int PollTime
+        {
+            get { return _pollTime; }
+            set { _pollTime = value; }
+        }
+
+        private string _connectTag;
+        public string ConnectTag
+        {
+            get { return _connectTag; }
+            set { _connectTag = value; }
+        }
+
         public bool isScan = true;
         public ManualResetEvent scanDeviceManualResetEvent = new ManualResetEvent(true);
         public event Action<string> errorMessageEvent;//只需要在外部订阅此事件就可以进行异常消息通知

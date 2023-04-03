@@ -99,34 +99,6 @@ namespace ScadaFrame
             }
         }
 
-        private bool _autoConnect;
-        public override bool AutoConnect
-        {
-            get { return _autoConnect; }
-            set { _autoConnect = value; }
-        }
-
-        private bool _reconnect;
-        public override bool Reconnect
-        {
-            get { return _reconnect; }
-            set { _reconnect = value; }
-        }
-
-        private int _pollTime;
-        public override int PollTime
-        {
-            get { return _pollTime; }
-            set { _pollTime = value; }
-        }
-
-        private string _connectTag;
-        public override string ConnectTag
-        {
-            get { return _connectTag; }
-            set { _connectTag = value; }
-        }
-
         public override bool InitPlc()
         {
             plc = new Plc(_cpu, _ip, _rack, _slot);

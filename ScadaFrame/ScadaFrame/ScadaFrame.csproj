@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABPLC.cs" />
     <Compile Include="AlarmRecode.cs" />
     <Compile Include="CommunicateDevice.cs" />
     <Compile Include="Form1.cs">
