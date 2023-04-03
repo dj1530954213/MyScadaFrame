@@ -168,6 +168,13 @@ namespace ScadaFrame
             //关闭数据库连接
             sqlhandle.disconnection();
             sqlhandle.Dispose();
+            //挂起扫描线程并断开所有设备连接
+            foreach (var item in deviceDictionary)
+            {
+                item.Value.scanDeviceManualResetEvent.Reset();
+                item.Value.DisConnect();
+            }
+
         }
 
         #region 点表内按钮操作
@@ -802,8 +809,16 @@ namespace ScadaFrame
                         pareList.Add(uiDataGridViewDevice.Rows[q].Cells[6].Value.ToString());
                         devicePareDictionary.Add(new string[] { uiDataGridViewDevice.Rows[q].Cells[0].Value.ToString(), uiDataGridViewDevice.Rows[q].Cells[1].Value.ToString() }, pareList);
                         continue;//这里必须使用coninue否则将会直接跳出For循环
-                    //case "AB":
-                    //    break;
+                    case "AB"://string ip, byte cpuSlot , string route,bool autoConnect, bool reconnect, int pollTime, string connectTag
+                        pareList.Add(str[0]);
+                        pareList.Add(Convert.ToByte(str[1]));
+                        pareList.Add(str[2]);
+                        pareList.Add(uiDataGridViewDevice.Rows[q].Cells[4].EditedFormattedValue);
+                        pareList.Add(uiDataGridViewDevice.Rows[q].Cells[5].EditedFormattedValue);
+                        pareList.Add(Convert.ToInt32(uiDataGridViewDevice.Rows[q].Cells[7].Value));
+                        pareList.Add(uiDataGridViewDevice.Rows[q].Cells[6].Value.ToString());
+                        devicePareDictionary.Add(new string[] { uiDataGridViewDevice.Rows[q].Cells[0].Value.ToString(), uiDataGridViewDevice.Rows[q].Cells[1].Value.ToString() }, pareList);
+                        continue;
                     case "ModbusRtu"://string portName, int baudRate, int dataBits, int stopBits, int parity, bool autoConnect, bool reconnect, int pollTime,byte slaveAddress,string connectTag
                         pareList.Add(Convert.ToInt32(str[1]));
                         string[] comStr = str[0].Split('-');
