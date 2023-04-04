@@ -183,32 +183,6 @@ namespace ScadaFrame
             uiDataGridViewDB.ClearRows();
             try
             {
-                #region 读取文件的另一种实现方式
-                /*  使用OLEDB接口导入文件*/
-                //using (OpenFileDialog openExcel = new OpenFileDialog())
-                //{
-                //    openExcel.InitialDirectory = Directory.GetCurrentDirectory();//设置初始化路径
-                //    openExcel.Filter = "表格|*.xls";//设置格式
-                //    string excelPath = "";
-                //    if (openExcel.ShowDialog() == DialogResult.OK)
-                //    {
-                //        excelPath = openExcel.FileName;
-                //        string connectString = "provider=microsoft.jet.oledb.4.0;data source=" + excelPath + ";extended properties=excel 8.0";//连接字符串
-                //        OleDbConnection excelOleDb = new OleDbConnection(connectString);
-                //        string commandString = "select * from [Variable$A:K]";
-                //        OleDbCommand oleDbCommand = new OleDbCommand(commandString, excelOleDb);
-                //        OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(oleDbCommand);
-                //        DataTable dataTable = new DataTable();
-                //        oleDbDataAdapter.Fill(dataTable);
-                //        uiDataGridViewDB.DataSource = dataTable;//数据源设置完毕
-                //        //设置页面选择控件
-                //        uiPaginationDB.TotalCount = uiDataGridViewDB.RowCount;
-                //        uiPaginationDB.PageSize = 50;
-                //        uiDataGridViewFooterDB.DataGridView = uiDataGridViewDB;
-                //        excelOleDb.Dispose();
-                //    }
-                //}
-                #endregion
                 //实例化一个选择问价窗口
                 OpenFileDialog openCsv = new OpenFileDialog();
                 //设置默认路径为当前路径
@@ -235,7 +209,7 @@ namespace ScadaFrame
                             //数据导入单元格
                             uiDataGridViewDB.AddRow();
 
-                            for (int i = 0; i < 14; i++)
+                            for (int i = 0; i < 15; i++)
                             {
                                 if (i >= 6 && i <= 8)//将字符串转换为bool量需要单独处理
                                 {
@@ -333,7 +307,7 @@ namespace ScadaFrame
                                                                              //数据导入单元格
                     uiDataGridViewDB.AddRow();
 
-                    for (int i = 0; i < 14; i++)
+                    for (int i = 0; i < 15; i++)
                     {
                         if (i >= 6 && i <= 8)//将字符串转换为bool量需要单独处理
                         {
@@ -925,13 +899,9 @@ namespace ScadaFrame
                 pointPare.llAlarm = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[12].Value);
                 pointPare.unit = uiDataGridViewDB.Rows[i].Cells[13].Value.ToString();
                 pointPare.describe = uiDataGridViewDB.Rows[i].Cells[4].Value.ToString();
+                pointPare.historyDeadZone = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[14].Value);
                 deviceDictionary[uiDataGridViewDB.Rows[i].Cells[1].Value.ToString()].PointDictionary.Add(uiDataGridViewDB.Rows[i].Cells[0].Value.ToString(), pointPare);
             }
-            ////将所有要读取的点位方法注册至委托上
-            //foreach (var item in deviceDictionary)
-            //{
-            //    item.Value.PointReadHandle();
-            //}
         }
         /// <summary>
         /// 为每个设备开启一个线程来读取数据

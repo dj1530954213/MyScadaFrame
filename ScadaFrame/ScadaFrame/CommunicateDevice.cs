@@ -107,9 +107,9 @@ namespace ScadaFrame
         /// 点位轮询读取处理
         /// </summary>
         public abstract void PointReadHandle();
-        public void HistoryRecord()
+        public void HistoryRecord(sqlhandle sqlhandle)
         {
-            
+            string sql = "";
         }
         /// <summary>
         /// alarm处理函数供form内循环调用
@@ -184,6 +184,30 @@ namespace ScadaFrame
             string sql = $"update AlarmRecode set stopTime = '{DateTime.Now.ToString()}' where pointName = '{pointName}'";
             sqlhandle.excute(sql);
             actualAlarmRefresh.Invoke();
+        }
+        /// <summary>
+        /// 对实际值与记录值进行死区校验，并返回此次实际值
+        /// </summary>
+        /// <typeparam name="T">读取点位的数据类型</typeparam>
+        /// <param name="valueRecode">pointPare中的数值记录</param>
+        /// <param name="realValue">实时读取的值</param>
+        /// <param name="deadZone">死区范围</param>
+        /// <param name="valueChange">值是否改变的指示</param>
+        /// <returns></returns>
+        public object deadZoneCheck<T>(ref object valueRecode, T realValue,float deadZone,ref bool valueChange)
+        {
+            if (Math.Abs(Convert.ToSingle(valueRecode) - Convert.ToSingle(realValue))>deadZone )//当前值与记录值差的绝对值大于死区
+            {
+                valueChange = true;
+                valueRecode = realValue;
+                return realValue;
+
+            }
+            else
+            {
+                valueChange = false;
+                return realValue;
+            }
         }
         public  Dictionary<string, PointPare> PointDictionary = new Dictionary<string, PointPare>();
         
