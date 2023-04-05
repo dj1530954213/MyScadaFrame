@@ -27,6 +27,9 @@ namespace ScadaFrame
         public float llAlarm;
         public string unit;
         public string describe;
+        public float deadZone;
+        public bool valueChanged = false;
+        public object valueRecode;
         /// <summary>
         /// 按照值本身的类型来获取它的值
         /// </summary>

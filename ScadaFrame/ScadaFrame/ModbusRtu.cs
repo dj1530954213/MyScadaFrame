@@ -242,25 +242,37 @@ namespace ScadaFrame
                                 {
                                     switch (item.Value.dataType)
                                     {
-                                        //BOOL INT DINT REAL BYTE
-                                        case "BOOL"://通过委托的方法来实现对每一个变量读取函数的回调
+                                        ////BOOL INT DINT REAL BYTE
+                                        //case "BOOL"://通过委托的方法来实现对每一个变量读取函数的回调
+                                        //    item.Value.value = ReadBool(SlaveAddress, item.Value.address);
+                                        //    break;
+                                        //case "INT":
+                                        //    item.Value.value = ReadInt(SlaveAddress, item.Value.address);
+                                        //    break;
+                                        //case "DINT":
+                                        //    item.Value.value = ReadDInt(SlaveAddress, item.Value.address);
+                                        //    break;
+                                        //case "REAL":
+                                        //    item.Value.value = ReadReal(SlaveAddress, item.Value.address);
+                                        //    break;
+                                        ////case "BYTE":
+                                        ////    base.readDelegate += (() =>
+                                        ////    {
+                                        ////        item.Value.value = ReadByte(item.Value.address);
+                                        ////    });
+                                        //default:
+                                        //    break;
+                                        case "BOOL":
                                             item.Value.value = ReadBool(SlaveAddress, item.Value.address);
                                             break;
                                         case "INT":
-                                            item.Value.value = ReadInt(SlaveAddress, item.Value.address);
+                                            item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadInt(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
                                             break;
                                         case "DINT":
-                                            item.Value.value = ReadDInt(SlaveAddress, item.Value.address);
+                                            item.Value.value = base.deadZoneCheck<uint>(ref item.Value.valueRecode, ReadDInt(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
                                             break;
                                         case "REAL":
-                                            item.Value.value = ReadReal(SlaveAddress, item.Value.address);
-                                            break;
-                                        //case "BYTE":
-                                        //    base.readDelegate += (() =>
-                                        //    {
-                                        //        item.Value.value = ReadByte(item.Value.address);
-                                        //    });
-                                        default:
+                                            item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadReal(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
                                             break;
                                     }
                                 }

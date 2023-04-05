@@ -125,7 +125,7 @@ namespace ScadaFrame
             }
             uiComboBox_AlarmType.Items.AddRange(new string[] { "所有报警", "状态量报警", "低报", "低低报", "高报", "高高报" });
             uiComboBox_AlarmType.SelectedIndex = 0;
-            DTP_AlarmStartTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day-1} 00:00:00";
+            DTP_AlarmStartTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day - 1} 00:00:00";
             DTP_AlarmStopTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} 00:00:00";
             #endregion
             #region 加载预处理
@@ -161,6 +161,8 @@ namespace ScadaFrame
             AlarmRecode();
             //先执行一次此函数以初始化实时报警表
             ActualAlarmQuery();
+            //历史记录服务开启
+            HistoryRecodeRun(sqlhandle);
             #endregion
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -183,32 +185,6 @@ namespace ScadaFrame
             uiDataGridViewDB.ClearRows();
             try
             {
-                #region 读取文件的另一种实现方式
-                /*  使用OLEDB接口导入文件*/
-                //using (OpenFileDialog openExcel = new OpenFileDialog())
-                //{
-                //    openExcel.InitialDirectory = Directory.GetCurrentDirectory();//设置初始化路径
-                //    openExcel.Filter = "表格|*.xls";//设置格式
-                //    string excelPath = "";
-                //    if (openExcel.ShowDialog() == DialogResult.OK)
-                //    {
-                //        excelPath = openExcel.FileName;
-                //        string connectString = "provider=microsoft.jet.oledb.4.0;data source=" + excelPath + ";extended properties=excel 8.0";//连接字符串
-                //        OleDbConnection excelOleDb = new OleDbConnection(connectString);
-                //        string commandString = "select * from [Variable$A:K]";
-                //        OleDbCommand oleDbCommand = new OleDbCommand(commandString, excelOleDb);
-                //        OleDbDataAdapter oleDbDataAdapter = new OleDbDataAdapter(oleDbCommand);
-                //        DataTable dataTable = new DataTable();
-                //        oleDbDataAdapter.Fill(dataTable);
-                //        uiDataGridViewDB.DataSource = dataTable;//数据源设置完毕
-                //        //设置页面选择控件
-                //        uiPaginationDB.TotalCount = uiDataGridViewDB.RowCount;
-                //        uiPaginationDB.PageSize = 50;
-                //        uiDataGridViewFooterDB.DataGridView = uiDataGridViewDB;
-                //        excelOleDb.Dispose();
-                //    }
-                //}
-                #endregion
                 //实例化一个选择问价窗口
                 OpenFileDialog openCsv = new OpenFileDialog();
                 //设置默认路径为当前路径
@@ -235,7 +211,7 @@ namespace ScadaFrame
                             //数据导入单元格
                             uiDataGridViewDB.AddRow();
 
-                            for (int i = 0; i < 14; i++)
+                            for (int i = 0; i < 15; i++)
                             {
                                 if (i >= 6 && i <= 8)//将字符串转换为bool量需要单独处理
                                 {
@@ -333,7 +309,7 @@ namespace ScadaFrame
                                                                              //数据导入单元格
                     uiDataGridViewDB.AddRow();
 
-                    for (int i = 0; i < 14; i++)
+                    for (int i = 0; i < 15; i++)
                     {
                         if (i >= 6 && i <= 8)//将字符串转换为bool量需要单独处理
                         {
@@ -783,7 +759,7 @@ namespace ScadaFrame
 
         #endregion
 
-        #region 所有设备连接方法、轮询读取方法、报警轮询方法、报警查询方法
+        #region 所有设备连接方法、轮询读取方法、报警轮询方法、报警查询方法、历史数据记录方法
 
         /// <summary>
         /// 读取设备表内参数并填充至Dictionary内
@@ -925,13 +901,9 @@ namespace ScadaFrame
                 pointPare.llAlarm = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[12].Value);
                 pointPare.unit = uiDataGridViewDB.Rows[i].Cells[13].Value.ToString();
                 pointPare.describe = uiDataGridViewDB.Rows[i].Cells[4].Value.ToString();
+                pointPare.deadZone = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[14].Value);
                 deviceDictionary[uiDataGridViewDB.Rows[i].Cells[1].Value.ToString()].PointDictionary.Add(uiDataGridViewDB.Rows[i].Cells[0].Value.ToString(), pointPare);
             }
-            ////将所有要读取的点位方法注册至委托上
-            //foreach (var item in deviceDictionary)
-            //{
-            //    item.Value.PointReadHandle();
-            //}
         }
         /// <summary>
         /// 为每个设备开启一个线程来读取数据
@@ -1009,7 +981,7 @@ namespace ScadaFrame
                     uiDataGridViewActualAlarm.Rows.Add(i.ToString(), alarmRecodes[i].AlarmName, alarmRecodes[i].AlarmDescribe, alarmRecodes[i].StartTime, alarmRecodes[i].StopTime, alarmRecodes[i].AlarmType, alarmRecodes[i].ActualValue, alarmRecodes[i].AlarmConfirm);//首先填充表格
                     try
                     {
-                        if (uiDataGridViewActualAlarm.Rows[i-(index-1)*count].Cells[7].Value.ToString() == "未确认" || uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[4].Value.ToString() == "")//根据不同的条件改变报警信息字体的颜色
+                        if (uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[7].Value.ToString() == "未确认" || uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[4].Value.ToString() == "")//根据不同的条件改变报警信息字体的颜色
                         {
                             switch (uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[5].Value.ToString())
                             {
@@ -1048,7 +1020,7 @@ namespace ScadaFrame
 
                         throw;
                     }
-                    
+
                 }
             }));
         }
@@ -1062,6 +1034,20 @@ namespace ScadaFrame
         private void uiPaginationActualAlarm_PageChanged(object sender, object pagingSource, int pageIndex, int count)
         {
             ActualAlarmQuery();
+        }
+        public void HistoryRecodeRun(sqlhandle sqlhandle)
+        {
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    foreach (var item in deviceDictionary)
+                    {
+                        item.Value.HistoryRecordHandle(sqlhandle);
+                    }
+                    Thread.Sleep(100);
+                }
+            });
         }
         #endregion
 
@@ -1177,7 +1163,7 @@ namespace ScadaFrame
                     builderWriteLine.Append($"{uiDataGridViewAlarmHistory.Columns[i].HeaderText.ToString()},");
                 }
                 stream.WriteLine(builderWriteLine.ToString());
-                for (int i = 0; i < uiDataGridViewAlarmHistory.Rows.Count-1; i++)//写入内容
+                for (int i = 0; i < uiDataGridViewAlarmHistory.Rows.Count - 1; i++)//写入内容
                 {
                     builderWriteLine.Clear();
                     for (int j = 0; j < uiDataGridViewAlarmHistory.Rows[i].Cells.Count; j++)
