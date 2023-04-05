@@ -1,5 +1,5 @@
-点名,通讯单元,地址,数据类型,点位描述,所属设备名称,启动扫描,启用报警,记录历史值,高报限值,高高报限值,低报限值,低低报限值,显示单位,历史记录死区,
-test1,Tcp-1,40001,REAL,AAA,S1,True,True,True,90,100,10,-5,MPA,0,
-test2,Tcp-1,1,BOOL,AAA,S1,True,True,True,0,0,0,0,MPA,0,
-test3,Tcp-1,40010,INT,AAA,S1,True,True,True,90,100,10,-5,MPA,0,
-test4,Tcp-1,40020,DINT,AAA,S1,True,True,True,90,100,10,-5,MPA,0,
+点名,通讯单元,地址,数据类型,点位描述,所属设备名称,启动扫描,启用报警,记录历史值,高报限值,高高报限值,低报限值,低低报限值,显示单位,历史记录死区
+test1,Tcp-1,40001,REAL,AAA,S1,TRUE,TRUE,TRUE,90,100,10,-5,MPA,2
+test2,Tcp-1,1,BOOL,AAA,S1,TRUE,TRUE,TRUE,0,0,0,0,MPA,0
+test3,Tcp-1,40010,INT,AAA,S1,TRUE,TRUE,TRUE,90,100,10,-5,MPA,2
+test4,Tcp-1,40020,DINT,AAA,S1,TRUE,TRUE,TRUE,90,100,10,-5,MPA,2

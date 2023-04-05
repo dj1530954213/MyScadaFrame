@@ -125,7 +125,7 @@ namespace ScadaFrame
             }
             uiComboBox_AlarmType.Items.AddRange(new string[] { "所有报警", "状态量报警", "低报", "低低报", "高报", "高高报" });
             uiComboBox_AlarmType.SelectedIndex = 0;
-            DTP_AlarmStartTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day-1} 00:00:00";
+            DTP_AlarmStartTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day - 1} 00:00:00";
             DTP_AlarmStopTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} 00:00:00";
             #endregion
             #region 加载预处理
@@ -161,6 +161,8 @@ namespace ScadaFrame
             AlarmRecode();
             //先执行一次此函数以初始化实时报警表
             ActualAlarmQuery();
+            //历史记录服务开启
+            HistoryRecodeRun(sqlhandle);
             #endregion
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -757,7 +759,7 @@ namespace ScadaFrame
 
         #endregion
 
-        #region 所有设备连接方法、轮询读取方法、报警轮询方法、报警查询方法
+        #region 所有设备连接方法、轮询读取方法、报警轮询方法、报警查询方法、历史数据记录方法
 
         /// <summary>
         /// 读取设备表内参数并填充至Dictionary内
@@ -899,7 +901,7 @@ namespace ScadaFrame
                 pointPare.llAlarm = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[12].Value);
                 pointPare.unit = uiDataGridViewDB.Rows[i].Cells[13].Value.ToString();
                 pointPare.describe = uiDataGridViewDB.Rows[i].Cells[4].Value.ToString();
-                pointPare.historyDeadZone = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[14].Value);
+                pointPare.deadZone = Convert.ToSingle(uiDataGridViewDB.Rows[i].Cells[14].Value);
                 deviceDictionary[uiDataGridViewDB.Rows[i].Cells[1].Value.ToString()].PointDictionary.Add(uiDataGridViewDB.Rows[i].Cells[0].Value.ToString(), pointPare);
             }
         }
@@ -979,7 +981,7 @@ namespace ScadaFrame
                     uiDataGridViewActualAlarm.Rows.Add(i.ToString(), alarmRecodes[i].AlarmName, alarmRecodes[i].AlarmDescribe, alarmRecodes[i].StartTime, alarmRecodes[i].StopTime, alarmRecodes[i].AlarmType, alarmRecodes[i].ActualValue, alarmRecodes[i].AlarmConfirm);//首先填充表格
                     try
                     {
-                        if (uiDataGridViewActualAlarm.Rows[i-(index-1)*count].Cells[7].Value.ToString() == "未确认" || uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[4].Value.ToString() == "")//根据不同的条件改变报警信息字体的颜色
+                        if (uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[7].Value.ToString() == "未确认" || uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[4].Value.ToString() == "")//根据不同的条件改变报警信息字体的颜色
                         {
                             switch (uiDataGridViewActualAlarm.Rows[i - (index - 1) * count].Cells[5].Value.ToString())
                             {
@@ -1018,7 +1020,7 @@ namespace ScadaFrame
 
                         throw;
                     }
-                    
+
                 }
             }));
         }
@@ -1032,6 +1034,20 @@ namespace ScadaFrame
         private void uiPaginationActualAlarm_PageChanged(object sender, object pagingSource, int pageIndex, int count)
         {
             ActualAlarmQuery();
+        }
+        public void HistoryRecodeRun(sqlhandle sqlhandle)
+        {
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    foreach (var item in deviceDictionary)
+                    {
+                        item.Value.HistoryRecordHandle(sqlhandle);
+                    }
+                    Thread.Sleep(100);
+                }
+            });
         }
         #endregion
 
@@ -1147,7 +1163,7 @@ namespace ScadaFrame
                     builderWriteLine.Append($"{uiDataGridViewAlarmHistory.Columns[i].HeaderText.ToString()},");
                 }
                 stream.WriteLine(builderWriteLine.ToString());
-                for (int i = 0; i < uiDataGridViewAlarmHistory.Rows.Count-1; i++)//写入内容
+                for (int i = 0; i < uiDataGridViewAlarmHistory.Rows.Count - 1; i++)//写入内容
                 {
                     builderWriteLine.Clear();
                     for (int j = 0; j < uiDataGridViewAlarmHistory.Rows[i].Cells.Count; j++)

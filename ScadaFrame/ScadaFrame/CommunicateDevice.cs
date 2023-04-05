@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO.Ports;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using S7.Net;
 
 namespace ScadaFrame
 {
     public abstract class CommunicateDevice
     {
-        public CommunicateDevice(bool autoConnect, bool reconnect, int pollTime,string connectTag)
+        public CommunicateDevice(bool autoConnect, bool reconnect, int pollTime, string connectTag)
         {
             this.AutoConnect = autoConnect;
             this.Reconnect = reconnect;
@@ -107,9 +103,28 @@ namespace ScadaFrame
         /// 点位轮询读取处理
         /// </summary>
         public abstract void PointReadHandle();
-        public void HistoryRecord(sqlhandle sqlhandle)
+        /// <summary>
+        /// 点位历史记录处理
+        /// </summary>
+        /// <param name="sqlhandle"></param>
+        public void HistoryRecordHandle(sqlhandle sqlhandle)
         {
-            string sql = "";
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Clear();
+            stringBuilder.Append("INSERT into historyRecode VALUES ");
+            foreach (var item in PointDictionary)
+            {
+                if (item.Value.valueChanged)
+                {
+                    stringBuilder.Append($"('{item.Key}',{item.Value.value},'{DateTime.Now.ToString()}'),");//进行sql语句拼接
+                    item.Value.valueChanged = false;//首先将标志位复位
+                }
+            }
+            stringBuilder.Remove(stringBuilder.Length - 1, 1);
+            if (stringBuilder.ToString().Length <= "INSERT into historyRecode VALUES ".Length) return;
+            IDataReader dataReader = sqlhandle.read(stringBuilder.ToString());//点位查询完成之后
+            dataReader.Close();
+            dataReader.Dispose();
         }
         /// <summary>
         /// alarm处理函数供form内循环调用
@@ -160,10 +175,10 @@ namespace ScadaFrame
                         }
                     }
                 }
-                
+
             }
         }
-        private void AlarmDBInsert(sqlhandle sqlhandler, PointPare pointPare,string pointName)
+        private void AlarmDBInsert(sqlhandle sqlhandler, PointPare pointPare, string pointName)
         {
             string sql = "";
             if (pointPare.dataType == "BOOL")
@@ -179,7 +194,7 @@ namespace ScadaFrame
             sqlhandler.excute(sql);
             actualAlarmRefresh.Invoke();
         }
-        private void AlarmDBUpdate(sqlhandle sqlhandle, PointPare pointPare,string pointName)
+        private void AlarmDBUpdate(sqlhandle sqlhandle, PointPare pointPare, string pointName)
         {
             string sql = $"update AlarmRecode set stopTime = '{DateTime.Now.ToString()}' where pointName = '{pointName}'";
             sqlhandle.excute(sql);
@@ -194,22 +209,17 @@ namespace ScadaFrame
         /// <param name="deadZone">死区范围</param>
         /// <param name="valueChange">值是否改变的指示</param>
         /// <returns></returns>
-        public object deadZoneCheck<T>(ref object valueRecode, T realValue,float deadZone,ref bool valueChange)
+        public object deadZoneCheck<T>(ref object valueRecode, T realValue, float deadZone, ref bool valueChange)
         {
-            if (Math.Abs(Convert.ToSingle(valueRecode) - Convert.ToSingle(realValue))>deadZone )//当前值与记录值差的绝对值大于死区
+            if (Math.Abs(Convert.ToSingle(valueRecode) - Convert.ToSingle(realValue)) > deadZone)//当前值与记录值差的绝对值大于死区设定值就将数据改变标志位置为1
             {
-                valueChange = true;
-                valueRecode = realValue;
-                return realValue;
-
-            }
-            else
-            {
-                valueChange = false;
+                valueChange = true;//标志位置为1
+                valueRecode = realValue;//并进行记录值更新
                 return realValue;
             }
+            return realValue;//若绝对值小于死区设定值则不进行记录值得更新
         }
-        public  Dictionary<string, PointPare> PointDictionary = new Dictionary<string, PointPare>();
-        
+        public Dictionary<string, PointPare> PointDictionary = new Dictionary<string, PointPare>();
+
     }
 }
