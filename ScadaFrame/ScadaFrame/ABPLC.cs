@@ -211,19 +211,19 @@ namespace ScadaFrame
                                         item.Value.value = ReadBool(item.Value.address);
                                         break;
                                     case "INT":
-                                        item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadShort(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                        item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadShort(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                         //item.Value.value = ReadShort(item.Value.address);
                                         break;
                                     case "DINT":
-                                        item.Value.value = base.deadZoneCheck<int>(ref item.Value.valueRecode, ReadDInt(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                        item.Value.value = base.deadZoneCheck<int>(ref item.Value.valueRecode, ReadDInt(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                         //item.Value.value = ReadDInt(item.Value.address);
                                         break;
                                     case "REAL":
-                                        item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadFloat(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                        item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadFloat(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                         //item.Value.value = ReadFloat(item.Value.address);
                                         break;
                                     case "BYTE":
-                                        item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadFloat(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                        item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadFloat(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                         //item.Value.value = ReadByte(item.Value.address);
                                         break;
                                 }

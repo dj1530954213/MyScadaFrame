@@ -124,9 +124,12 @@ namespace ScadaFrame
                 ((UISymbolButton)item).FillHoverColor = Color.LightSeaGreen;
             }
             uiComboBox_AlarmType.Items.AddRange(new string[] { "所有报警", "状态量报警", "低报", "低低报", "高报", "高高报" });
+            uiComboBoxHistoryRecodeSelect.Items.AddRange(new string[] { "test1", "test3", "test4" });
             uiComboBox_AlarmType.SelectedIndex = 0;
             DTP_AlarmStartTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day - 1} 00:00:00";
             DTP_AlarmStopTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} 00:00:00";
+            DTP_HistoryRecodeStart.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day - 1} 00:00:00";
+            DTP_HistoryRecodeStop.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} 00:00:00";
             #endregion
             #region 加载预处理
             //动态设置连接单元下拉框选项
@@ -1178,5 +1181,18 @@ namespace ScadaFrame
             }
         }
         #endregion
+
+        private void bt_HistoryRecode_Change_Click(object sender, EventArgs e)
+        {
+            string startTime = DTP_HistoryRecodeStart.Text;
+            string stopTime = DTP_HistoryRecodeStop.Text;
+            string sql = $"SELECT count(*) from historyRecode where recodeTime BETWEEN '{startTime}' AND '{stopTime}'";
+            IDataReader dataReader = sqlhandle.read(sql);
+            while (dataReader.Read())
+            {
+                float[] RecodeResult = new float[Convert.ToInt32(dataReader.Read())];
+            }
+
+        }
     }
 }

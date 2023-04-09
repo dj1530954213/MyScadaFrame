@@ -267,15 +267,15 @@ namespace ScadaFrame
                                             Console.WriteLine($"{item.Key}:{item.Value.value} status:{item.Value.valueChanged}");
                                             break;
                                         case "INT":
-                                            item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadInt(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                            item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadInt(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                             Console.WriteLine($"{item.Key}:{item.Value.value} status:{item.Value.valueChanged}");
                                             break;
                                         case "DINT":
-                                            item.Value.value = base.deadZoneCheck<uint>(ref item.Value.valueRecode, ReadDInt(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                            item.Value.value = base.deadZoneCheck<uint>(ref item.Value.valueRecode, ReadDInt(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                             Console.WriteLine($"{item.Key}:{item.Value.value} status:{item.Value.valueChanged}");
                                             break;
                                         case "REAL":
-                                            item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadReal(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                            item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadReal(item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                             Console.WriteLine($"{item.Key}:{item.Value.value} status:{item.Value.valueChanged}");
                                             break;
                                         default:

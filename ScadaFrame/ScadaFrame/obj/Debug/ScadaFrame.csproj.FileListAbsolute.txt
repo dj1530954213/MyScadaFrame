@@ -60,3 +60,6 @@ D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\NModbus4.xml
 D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\S7.Net.xml
 D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\SunnyUI.xml
 D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\obj\Debug\ScadaFrame.csproj.CopyComplete
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\HslControls.dll
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\HslControls.pdb
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\HslControls.xml
