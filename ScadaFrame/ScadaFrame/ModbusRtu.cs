@@ -266,13 +266,13 @@ namespace ScadaFrame
                                             item.Value.value = ReadBool(SlaveAddress, item.Value.address);
                                             break;
                                         case "INT":
-                                            item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadInt(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                            item.Value.value = base.deadZoneCheck<short>(ref item.Value.valueRecode, ReadInt(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                             break;
                                         case "DINT":
-                                            item.Value.value = base.deadZoneCheck<uint>(ref item.Value.valueRecode, ReadDInt(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                            item.Value.value = base.deadZoneCheck<uint>(ref item.Value.valueRecode, ReadDInt(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                             break;
                                         case "REAL":
-                                            item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadReal(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged);
+                                            item.Value.value = base.deadZoneCheck<float>(ref item.Value.valueRecode, ReadReal(SlaveAddress, item.Value.address), item.Value.deadZone, ref item.Value.valueChanged, item.Value.history);
                                             break;
                                     }
                                 }

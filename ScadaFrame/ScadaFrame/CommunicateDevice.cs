@@ -114,7 +114,7 @@ namespace ScadaFrame
             stringBuilder.Append("INSERT into historyRecode VALUES ");
             foreach (var item in PointDictionary)
             {
-                if (item.Value.valueChanged)
+                if (item.Value.history && item.Value.valueChanged)//启用历史数据采集功能且历史值状态改变
                 {
                     stringBuilder.Append($"('{item.Key}',{item.Value.value},'{DateTime.Now.ToString()}'),");//进行sql语句拼接
                     item.Value.valueChanged = false;//首先将标志位复位
@@ -209,8 +209,12 @@ namespace ScadaFrame
         /// <param name="deadZone">死区范围</param>
         /// <param name="valueChange">值是否改变的指示</param>
         /// <returns></returns>
-        public object deadZoneCheck<T>(ref object valueRecode, T realValue, float deadZone, ref bool valueChange)
+        public object deadZoneCheck<T>(ref object valueRecode, T realValue, float deadZone, ref bool valueChange,bool enableHistoryRecode)
         {
+            if (!enableHistoryRecode)
+            {
+                return realValue;
+            }
             if (Math.Abs(Convert.ToSingle(valueRecode) - Convert.ToSingle(realValue)) > deadZone)//当前值与记录值差的绝对值大于死区设定值就将数据改变标志位置为1
             {
                 valueChange = true;//标志位置为1
