@@ -93,6 +93,7 @@ namespace ScadaFrame
         public StringBuilder rowsCopy = new StringBuilder();//用于存放复制单元格的值
         string PointConfigPath = "";
         string DeviceConfigPath = "";
+        string HistoryRecodeFilePath = "";
         public Control[] deviceConfigContorl;
         public int deviceCount = 0;
         public bool deviceConnectState = false;
@@ -100,6 +101,8 @@ namespace ScadaFrame
         public Dictionary<string, CommunicateDevice> deviceDictionary = new Dictionary<string, CommunicateDevice>();
         public Dictionary<string[], List<object>> devicePareDictionary = new Dictionary<string[], List<object>>();
         public Dictionary<string, int> deviceNum = new Dictionary<string, int>();
+        public Dictionary<string, HistoryRecodePoint> historyRecodePointCollect = new Dictionary<string, HistoryRecodePoint>();
+        public Dictionary<string,string[]> historyRecodeItemsPare = new Dictionary<string,string[]>();
         public sqlhandle sqlhandle;
         public List<AlarmRecode> alarmRecodes = new List<AlarmRecode>();
         //public SiemensPLC siemensPLC = new SiemensPLC();
@@ -124,7 +127,6 @@ namespace ScadaFrame
                 ((UISymbolButton)item).FillHoverColor = Color.LightSeaGreen;
             }
             uiComboBox_AlarmType.Items.AddRange(new string[] { "所有报警", "状态量报警", "低报", "低低报", "高报", "高高报" });
-            uiComboBoxHistoryRecodeSelect.Items.AddRange(new string[] { "test1", "test3", "test4" });
             uiComboBox_AlarmType.SelectedIndex = 0;
             DTP_AlarmStartTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day - 1} 00:00:00";
             DTP_AlarmStopTime.Text = $"{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} 00:00:00";
@@ -1118,7 +1120,7 @@ namespace ScadaFrame
             {
                 alarmType = "";
             }
-            string sql = $"SELECT * from AlarmRecode WHERE startTime BETWEEN '{startTime}' and '{stopTime}' {alarmType}";
+            string sql = $"SELECT * from AlarmRecode WHERE startTime BETWEEN '{startTime}' and '{stopTime}' {alarmType} order by startTime desc";
             IDataReader dataReader = sqlhandle.read(sql);
             while (dataReader.Read())
             {
@@ -1181,18 +1183,173 @@ namespace ScadaFrame
             }
         }
         #endregion
+        #region 历史记录UI层处理
+        private void bt_HistoryRecode_choseFile_Click(object sender, EventArgs e)
+        {
+            historyRecodeItemsPare.Clear();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV文件|*.csv";
+            openFileDialog.InitialDirectory = Directory.GetCurrentDirectory() + "\\HistoryRecodePointConfig";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                HistoryRecodeFilePath = openFileDialog.FileName;
+                using (StreamReader CSVreader = new StreamReader(openFileDialog.FileName, Encoding.Default))
+                {
+                    CSVreader.ReadLine();//略过标题行
+                    while(true)
+                    {
+                        string IOstring = CSVreader.ReadLine();
+                        if (IOstring == null)//如果最后一行
+                        {
+                            break;
+                        }
+                        string[] result = IOstring.Split(',');
+                        historyRecodeItemsPare.Add(result[0],result);//将参数添加至字典中等待后续处理
+                    }
+                    CSVreader.Close();
+                }
+                cbx_HistoryRecodeSelect.Items.Clear();
+                foreach (var item in historyRecodeItemsPare)//historyRecodeItemsPare点个点位文件，在其中保存了此文件中的所有点位配置信息
+                {
+                    cbx_HistoryRecodeSelect.Items.Add(item.Key);
+                }
+                if (cbx_HistoryRecodeSelect.Items.Count != 0)//如果打开的文件为新加载的文件则不能指定下拉框的选择索引为0并作出提示
+                {
+                    cbx_HistoryRecodeSelect.SelectedIndex = 0;
+                }
+                else
+                {
+                    messageBox.ShowErrorTip("当前文件夹内无历史数据点位，请进行配置", 3000);
+                }
+            }
+            openFileDialog.Dispose();
+            //将点表中的点名添加至历史数据点位添加选择框中
+            cbx_HistoryRecodeAdd.Items.Clear();//多次打开配置文件时需要清除上一次写入的新增点表下拉框中的原始数据
+            for (int i = 0; i < uiDataGridViewDB.RowCount - 1; i++)
+            {
+                if (uiDataGridViewDB.Rows[i].Cells[3].Value.ToString()!="BOOL")//bool量不允许进行历史值存储,通过报警记录就可以查看状态无需再记录历史数据
+                {
+                    cbx_HistoryRecodeAdd.Items.Add(uiDataGridViewDB.Rows[i].Cells[0].Value.ToString());
+                }
+            }
+        }
+
+        private void cbx_HistoryRecodeSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (historyRecodeItemsPare.Count == 0)
+            {
+                messageBox.ShowErrorTip("当前文件夹内无历史数据点位，请进行配置", 3000);
+                return;
+            }
+            string[] argbValue = historyRecodeItemsPare[cbx_HistoryRecodeSelect.Text][1].Split('-');//从文件中获取argb颜色值
+            clrpk_curveColor.Value = Color.FromArgb(Convert.ToInt32(argbValue[0]), Convert.ToInt32(argbValue[1]), Convert.ToInt32(argbValue[2]), Convert.ToInt32(argbValue[3]));//设置文本选择器的值
+
+            ckb_showCurve.Checked = Convert.ToBoolean(historyRecodeItemsPare[cbx_HistoryRecodeSelect.Text][2]);//设置是否显示曲线复选框的值
+
+            ckb_HistoryRecodeAlarmLine.Checked = Convert.ToBoolean(historyRecodeItemsPare[cbx_HistoryRecodeSelect.Text][3]);//设置是否显示报警参考线
+        }
+
+        private void bt_HistoryRecode_addToFile_Click(object sender, EventArgs e)
+        {
+            if (!historyRecodeItemsPare.ContainsKey(cbx_HistoryRecodeAdd.Text))
+            {
+                historyRecodeItemsPare.Add(cbx_HistoryRecodeAdd.Text, new string[] { cbx_HistoryRecodeAdd.Text, "255-255-255-255", "FALSE", "FALSE" });
+                cbx_HistoryRecodeSelect.Items.Add(cbx_HistoryRecodeAdd.Text);
+                messageBox.ShowSuccessDialog("添加成功");
+            }
+            else
+            {
+                messageBox.ShowErrorDialog("此点位已在文件夹中请勿重复添加");
+            }
+        }
+
+        private void bt_HistoryRecode_newFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV文件|*.csv";
+            saveFileDialog.InitialDirectory = Directory.GetCurrentDirectory() + "\\HistoryRecodePointConfig";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName, false, Encoding.Default);
+                string str = "点名,曲线颜色,是否显示曲线,是否显示报警线";
+                streamWriter.WriteLine(str);
+                streamWriter.Flush();
+                streamWriter.Close();
+            }
+            saveFileDialog.Dispose();
+        }
+
+        #endregion
+
+        private void bt_HistoryRecode_Delet_Click(object sender, EventArgs e)
+        {
+            if (historyRecodeItemsPare.ContainsKey(cbx_HistoryRecodeSelect.Text))
+            {
+                historyRecodeItemsPare.Remove(cbx_HistoryRecodeSelect.Text);
+                int select = cbx_HistoryRecodeSelect.SelectedIndex;//记录当前选择的记录位置
+                if (cbx_HistoryRecodeSelect.Items.Count == 0)//如果删除后下拉框中没有任何记录则需要对UI界面进行重置
+                {
+                    cbx_HistoryRecodeSelect.Text = "";
+                    clrpk_curveColor.Value = Color.FromArgb(0, 255, 255, 255);
+                    ckb_showCurve.Checked = false;
+                    ckb_HistoryRecodeAlarmLine.Checked = false;
+                }
+                else//否则将第一条记录作为选择的对象
+                {
+                    cbx_HistoryRecodeSelect.SelectedIndex = 0;
+                }
+                cbx_HistoryRecodeSelect.Items.RemoveAt(select);//删除点位之后需要将下拉框中的对应记录也进行删除
+                SaveHistoryRecodeConfig();
+                messageBox.ShowSuccessDialog("修改成功");
+            }
+            else
+            {
+                messageBox.ShowErrorDialog("操作失败，当前文件为空或当前文件中不包含此点位");
+            }
+        }
+        /// <summary>
+        /// 将当前记录的内容写入历史记录参数字典中
+        /// </summary>
+        public void SaveHistoryRecodeConfig()
+        {
+            string pointName = cbx_HistoryRecodeSelect.Text;
+            historyRecodeItemsPare[pointName][1] = $"{clrpk_curveColor.Value.A}-{clrpk_curveColor.Value.R}-{clrpk_curveColor.Value.G}-{clrpk_curveColor.Value.B}";
+            historyRecodeItemsPare[pointName][2] = ckb_showCurve.Checked.ToString();
+            historyRecodeItemsPare[pointName][3] = ckb_HistoryRecodeAlarmLine.Checked.ToString();
+        }
 
         private void bt_HistoryRecode_Change_Click(object sender, EventArgs e)
         {
-            string startTime = DTP_HistoryRecodeStart.Text;
-            string stopTime = DTP_HistoryRecodeStop.Text;
-            string sql = $"SELECT count(*) from historyRecode where recodeTime BETWEEN '{startTime}' AND '{stopTime}'";
-            IDataReader dataReader = sqlhandle.read(sql);
-            while (dataReader.Read())
+            if (historyRecodeItemsPare.Count == 0)//如果点击保存的时候字典中没有任何值直接退出
             {
-                float[] RecodeResult = new float[Convert.ToInt32(dataReader.Read())];
+                messageBox.ShowErrorDialog("当前文件夹为空,无法保存");
+                return;
             }
-
+            SaveHistoryRecodeConfig();//如果用户在本页面修改了值则需要先将配置保存至字典中再保存至本地配置文件中否则将无法将最后一次的修改保存
+            using (StreamWriter streamWriter = new StreamWriter(HistoryRecodeFilePath, false, Encoding.Default))
+            {
+                streamWriter.WriteLine("点名,曲线颜色,是否显示曲线,是否显示报警线");
+                foreach (var item in historyRecodeItemsPare)
+                {
+                    string pointConfigString = $"{item.Value[0].ToString()},{item.Value[1].ToString()},{item.Value[2]},{item.Value[3]}";
+                    streamWriter.WriteLine(pointConfigString);
+                }
+                streamWriter.Flush();
+                streamWriter.Close();
+            }
+            messageBox.ShowSuccessTip("配置保存成功", 3000);
+        }
+        /// <summary>
+        /// 当用户切换item时无论用户是否修改配置都将配置保存至字典中
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbx_HistoryRecodeSelect_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (historyRecodeItemsPare.ContainsKey(cbx_HistoryRecodeSelect.Text))
+            {
+                SaveHistoryRecodeConfig();
+            }
         }
     }
 }
