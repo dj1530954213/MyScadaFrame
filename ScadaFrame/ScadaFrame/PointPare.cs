@@ -70,11 +70,11 @@ namespace ScadaFrame
                     return AlarmingStateArbiter(ref alarmMark, ref alarmType, "低低报");
 
                 }
-                else if (i <= lAlarm)
+                else if (i <= lAlarm && i>llAlarm)//注意这里再进行判断的时候需要按照区间进行判断，如果按照单一值进行判断将会在没有命中目标值之前提前跳出判断函数
                 {
                     return AlarmingStateArbiter(ref alarmMark, ref alarmType, "低报");
                 }
-                else if (i >= hAlarm)
+                else if (i >= hAlarm && i<hhAlarm)
                 {
                     return AlarmingStateArbiter(ref alarmMark, ref alarmType, "高报");
                 }

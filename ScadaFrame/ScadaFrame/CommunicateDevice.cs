@@ -114,7 +114,7 @@ namespace ScadaFrame
             stringBuilder.Append("INSERT into historyRecode VALUES ");
             foreach (var item in PointDictionary)
             {
-                if (item.Value.history && item.Value.valueChanged)//启用历史数据采集功能且历史值状态改变
+                if (item.Value.dataType!="BOOL" && item.Value.history && item.Value.valueChanged)//非状态量且启用历史数据采集功能且历史值状态改变
                 {
                     stringBuilder.Append($"('{item.Key}',{item.Value.value},'{DateTime.Now.ToString()}'),");//进行sql语句拼接
                     item.Value.valueChanged = false;//首先将标志位复位

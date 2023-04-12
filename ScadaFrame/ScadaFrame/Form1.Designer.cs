@@ -59,11 +59,6 @@ namespace ScadaFrame
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiSplitContainer1 = new Sunny.UI.UISplitContainer();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bt_Page_Permission = new Sunny.UI.UISymbolButton();
@@ -223,31 +218,29 @@ namespace ScadaFrame
             this.hslCurveHistory = new HslControls.HslCurveHistory();
             this.uiTabControlHistoryRecode = new Sunny.UI.UITabControl();
             this.tabPageHistoryRecodeSet = new System.Windows.Forms.TabPage();
+            this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiTextBox2 = new Sunny.UI.UITextBox();
-            this.uiColorPicker1 = new Sunny.UI.UIColorPicker();
+            this.clrpk_curveColor = new Sunny.UI.UIColorPicker();
+            this.bt_HistoryRecode_choseFile = new Sunny.UI.UISymbolButton();
+            this.uiSymbolButton8 = new Sunny.UI.UISymbolButton();
+            this.bt_HistoryRecode_query = new Sunny.UI.UISymbolButton();
+            this.bt_HistoryRecode_newFile = new Sunny.UI.UISymbolButton();
+            this.bt_HistoryRecode_addToFile = new Sunny.UI.UISymbolButton();
+            this.bt_HistoryRecode_Delet = new Sunny.UI.UISymbolButton();
             this.bt_HistoryRecode_Change = new Sunny.UI.UISymbolButton();
-            this.CB_HistoryRecodeShowAlarmZone = new Sunny.UI.UICheckBox();
-            this.CB_HistoryRecodeAlarmLine = new Sunny.UI.UICheckBox();
-            this.uiCheckBox1 = new Sunny.UI.UICheckBox();
-            this.CB_HistoryRecodeShowAxis = new Sunny.UI.UICheckBox();
-            this.uiComboBoxHistoryRecodeSelect = new Sunny.UI.UIComboBox();
+            this.ckb_HistoryRecodeAlarmLine = new Sunny.UI.UICheckBox();
+            this.ckb_showCurve = new Sunny.UI.UICheckBox();
+            this.cbx_HistoryRecodeAdd = new Sunny.UI.UIComboBox();
+            this.cbx_HistoryRecodeSelect = new Sunny.UI.UIComboBox();
             this.uiMarkLabel4 = new Sunny.UI.UIMarkLabel();
             this.uiMarkLabel2 = new Sunny.UI.UIMarkLabel();
+            this.uiMarkLabel3 = new Sunny.UI.UIMarkLabel();
             this.uiMarkLabel5 = new Sunny.UI.UIMarkLabel();
             this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.DTP_HistoryRecodeStop = new Sunny.UI.UIDatetimePicker();
             this.DTP_HistoryRecodeStart = new Sunny.UI.UIDatetimePicker();
             this.tabPageHistoryRecodeCollect = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton5 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton4 = new Sunny.UI.UISymbolButton();
-            this.uiDataGridViewHistoryRecode = new Sunny.UI.UIDataGridView();
-            this.ColumnHistoryRecodeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnHistoryRecodeConfig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageAlarm = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
@@ -332,9 +325,6 @@ namespace ScadaFrame
             this.uiDataGridView2 = new Sunny.UI.UIDataGridView();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.uiMarkLabel6 = new Sunny.UI.UIMarkLabel();
-            this.uiColorPicker2 = new Sunny.UI.UIColorPicker();
-            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             ((System.ComponentModel.ISupportInitialize)(this.uiSplitContainer1)).BeginInit();
             this.uiSplitContainer1.Panel1.SuspendLayout();
             this.uiSplitContainer1.Panel2.SuspendLayout();
@@ -379,10 +369,6 @@ namespace ScadaFrame
             this.tableLayoutPanel23.SuspendLayout();
             this.uiTabControlHistoryRecode.SuspendLayout();
             this.tabPageHistoryRecodeSet.SuspendLayout();
-            this.tabPageHistoryRecodeCollect.SuspendLayout();
-            this.tableLayoutPanel24.SuspendLayout();
-            this.tableLayoutPanel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiDataGridViewHistoryRecode)).BeginInit();
             this.tabPageAlarm.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
@@ -823,7 +809,7 @@ namespace ScadaFrame
             this.tabPageConnection.Location = new System.Drawing.Point(0, 40);
             this.tabPageConnection.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageConnection.Name = "tabPageConnection";
-            this.tabPageConnection.Size = new System.Drawing.Size(200, 60);
+            this.tabPageConnection.Size = new System.Drawing.Size(1947, 828);
             this.tabPageConnection.TabIndex = 1;
             this.tabPageConnection.Text = "1";
             this.tabPageConnection.UseVisualStyleBackColor = true;
@@ -840,7 +826,7 @@ namespace ScadaFrame
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 60);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1947, 828);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // uiTabControl1
@@ -855,12 +841,12 @@ namespace ScadaFrame
             this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.uiTabControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTabControl1.ItemSize = new System.Drawing.Size(150, 40);
-            this.uiTabControl1.Location = new System.Drawing.Point(165, 3);
+            this.uiTabControl1.Location = new System.Drawing.Point(1586, 3);
             this.uiTabControl1.MainPage = "";
             this.uiTabControl1.Name = "uiTabControl1";
             this.uiTabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.uiTabControl1.SelectedIndex = 0;
-            this.uiTabControl1.Size = new System.Drawing.Size(32, 54);
+            this.uiTabControl1.Size = new System.Drawing.Size(358, 822);
             this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl1.TabIndex = 4;
             this.uiTabControl1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -871,7 +857,7 @@ namespace ScadaFrame
             this.tabPageSiemens.Controls.Add(this.tableLayoutPanel10);
             this.tabPageSiemens.Location = new System.Drawing.Point(0, 40);
             this.tabPageSiemens.Name = "tabPageSiemens";
-            this.tabPageSiemens.Size = new System.Drawing.Size(32, 14);
+            this.tabPageSiemens.Size = new System.Drawing.Size(358, 782);
             this.tabPageSiemens.TabIndex = 0;
             this.tabPageSiemens.Text = "西门子";
             this.tabPageSiemens.UseVisualStyleBackColor = true;
@@ -890,7 +876,7 @@ namespace ScadaFrame
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(32, 14);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(358, 782);
             this.tableLayoutPanel10.TabIndex = 5;
             // 
             // uiGroupBoxDeviceConfig
@@ -904,7 +890,7 @@ namespace ScadaFrame
             this.uiGroupBoxDeviceConfig.Name = "uiGroupBoxDeviceConfig";
             this.uiGroupBoxDeviceConfig.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBoxDeviceConfig.Radius = 45;
-            this.uiGroupBoxDeviceConfig.Size = new System.Drawing.Size(24, 1);
+            this.uiGroupBoxDeviceConfig.Size = new System.Drawing.Size(350, 381);
             this.uiGroupBoxDeviceConfig.TabIndex = 3;
             this.uiGroupBoxDeviceConfig.Text = "设备参数设置";
             this.uiGroupBoxDeviceConfig.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -952,7 +938,7 @@ namespace ScadaFrame
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(24, 0);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(350, 349);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // cb_Siemens_Drive
@@ -968,12 +954,12 @@ namespace ScadaFrame
             "ABPLC，",
             "OPCServer,",
             "OPCClient"});
-            this.cb_Siemens_Drive.Location = new System.Drawing.Point(14, 5);
+            this.cb_Siemens_Drive.Location = new System.Drawing.Point(160, 39);
             this.cb_Siemens_Drive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cb_Siemens_Drive.MinimumSize = new System.Drawing.Size(63, 0);
             this.cb_Siemens_Drive.Name = "cb_Siemens_Drive";
             this.cb_Siemens_Drive.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cb_Siemens_Drive.Size = new System.Drawing.Size(63, 1);
+            this.cb_Siemens_Drive.Size = new System.Drawing.Size(167, 24);
             this.cb_Siemens_Drive.TabIndex = 9;
             this.cb_Siemens_Drive.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cb_Siemens_Drive.Watermark = "";
@@ -984,12 +970,12 @@ namespace ScadaFrame
             this.tb_Siemens_PollTime.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Siemens_PollTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Siemens_PollTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_Siemens_PollTime.Location = new System.Drawing.Point(14, 5);
+            this.tb_Siemens_PollTime.Location = new System.Drawing.Point(160, 277);
             this.tb_Siemens_PollTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Siemens_PollTime.MinimumSize = new System.Drawing.Size(1, 16);
             this.tb_Siemens_PollTime.Name = "tb_Siemens_PollTime";
             this.tb_Siemens_PollTime.ShowText = false;
-            this.tb_Siemens_PollTime.Size = new System.Drawing.Size(4, 20);
+            this.tb_Siemens_PollTime.Size = new System.Drawing.Size(167, 24);
             this.tb_Siemens_PollTime.TabIndex = 6;
             this.tb_Siemens_PollTime.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tb_Siemens_PollTime.Watermark = "";
@@ -1000,11 +986,11 @@ namespace ScadaFrame
             this.cebx_Reconnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cebx_Reconnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cebx_Reconnect.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cebx_Reconnect.Location = new System.Drawing.Point(13, 3);
+            this.cebx_Reconnect.Location = new System.Drawing.Point(159, 241);
             this.cebx_Reconnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.cebx_Reconnect.Name = "cebx_Reconnect";
             this.cebx_Reconnect.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cebx_Reconnect.Size = new System.Drawing.Size(6, 1);
+            this.cebx_Reconnect.Size = new System.Drawing.Size(169, 28);
             this.cebx_Reconnect.TabIndex = 8;
             this.cebx_Reconnect.Text = "断线重连";
             this.cebx_Reconnect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -1013,9 +999,9 @@ namespace ScadaFrame
             // 
             this.uiLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel1.Location = new System.Drawing.Point(20, 0);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel1.Size = new System.Drawing.Size(116, 34);
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "设备编号";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1026,11 +1012,11 @@ namespace ScadaFrame
             this.ckbx_AutoConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbx_AutoConnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ckbx_AutoConnect.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ckbx_AutoConnect.Location = new System.Drawing.Point(13, 3);
+            this.ckbx_AutoConnect.Location = new System.Drawing.Point(159, 207);
             this.ckbx_AutoConnect.MinimumSize = new System.Drawing.Size(1, 1);
             this.ckbx_AutoConnect.Name = "ckbx_AutoConnect";
             this.ckbx_AutoConnect.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.ckbx_AutoConnect.Size = new System.Drawing.Size(6, 1);
+            this.ckbx_AutoConnect.Size = new System.Drawing.Size(169, 28);
             this.ckbx_AutoConnect.TabIndex = 7;
             this.ckbx_AutoConnect.Text = "自动连接";
             this.ckbx_AutoConnect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -1039,9 +1025,9 @@ namespace ScadaFrame
             // 
             this.uiLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel2.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel2.Location = new System.Drawing.Point(20, 34);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel2.Size = new System.Drawing.Size(116, 34);
             this.uiLabel2.TabIndex = 0;
             this.uiLabel2.Text = "通讯驱动";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1051,9 +1037,9 @@ namespace ScadaFrame
             // 
             this.uiLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel3.Location = new System.Drawing.Point(20, 68);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel3.Size = new System.Drawing.Size(116, 34);
             this.uiLabel3.TabIndex = 0;
             this.uiLabel3.Text = "设备型号";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1064,12 +1050,12 @@ namespace ScadaFrame
             this.tb_Siemens_Slot.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Siemens_Slot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Siemens_Slot.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_Siemens_Slot.Location = new System.Drawing.Point(14, 5);
+            this.tb_Siemens_Slot.Location = new System.Drawing.Point(160, 175);
             this.tb_Siemens_Slot.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Siemens_Slot.MinimumSize = new System.Drawing.Size(1, 16);
             this.tb_Siemens_Slot.Name = "tb_Siemens_Slot";
             this.tb_Siemens_Slot.ShowText = false;
-            this.tb_Siemens_Slot.Size = new System.Drawing.Size(4, 20);
+            this.tb_Siemens_Slot.Size = new System.Drawing.Size(167, 24);
             this.tb_Siemens_Slot.TabIndex = 5;
             this.tb_Siemens_Slot.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tb_Siemens_Slot.Watermark = "";
@@ -1079,9 +1065,9 @@ namespace ScadaFrame
             // 
             this.uiLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel4.Location = new System.Drawing.Point(20, 102);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel4.Size = new System.Drawing.Size(116, 34);
             this.uiLabel4.TabIndex = 0;
             this.uiLabel4.Text = "IP地址";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1091,9 +1077,9 @@ namespace ScadaFrame
             // 
             this.uiLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel5.Location = new System.Drawing.Point(20, 136);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel5.Size = new System.Drawing.Size(116, 34);
             this.uiLabel5.TabIndex = 0;
             this.uiLabel5.Text = "机架号";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1103,13 +1089,13 @@ namespace ScadaFrame
             // 
             this.itb_Siemens_IP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itb_Siemens_IP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.itb_Siemens_IP.Location = new System.Drawing.Point(14, 5);
+            this.itb_Siemens_IP.Location = new System.Drawing.Point(160, 107);
             this.itb_Siemens_IP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.itb_Siemens_IP.MinimumSize = new System.Drawing.Size(1, 1);
             this.itb_Siemens_IP.Name = "itb_Siemens_IP";
             this.itb_Siemens_IP.Padding = new System.Windows.Forms.Padding(1);
             this.itb_Siemens_IP.ShowText = false;
-            this.itb_Siemens_IP.Size = new System.Drawing.Size(4, 20);
+            this.itb_Siemens_IP.Size = new System.Drawing.Size(167, 24);
             this.itb_Siemens_IP.TabIndex = 4;
             this.itb_Siemens_IP.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.itb_Siemens_IP.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -1118,9 +1104,9 @@ namespace ScadaFrame
             // 
             this.uiLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel6.Location = new System.Drawing.Point(20, 170);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel6.Size = new System.Drawing.Size(116, 34);
             this.uiLabel6.TabIndex = 0;
             this.uiLabel6.Text = "槽号";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1131,12 +1117,12 @@ namespace ScadaFrame
             this.tb_Siemens_DeviceType.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Siemens_DeviceType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Siemens_DeviceType.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_Siemens_DeviceType.Location = new System.Drawing.Point(14, 5);
+            this.tb_Siemens_DeviceType.Location = new System.Drawing.Point(160, 73);
             this.tb_Siemens_DeviceType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Siemens_DeviceType.MinimumSize = new System.Drawing.Size(1, 16);
             this.tb_Siemens_DeviceType.Name = "tb_Siemens_DeviceType";
             this.tb_Siemens_DeviceType.ShowText = false;
-            this.tb_Siemens_DeviceType.Size = new System.Drawing.Size(4, 20);
+            this.tb_Siemens_DeviceType.Size = new System.Drawing.Size(167, 24);
             this.tb_Siemens_DeviceType.TabIndex = 3;
             this.tb_Siemens_DeviceType.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tb_Siemens_DeviceType.Watermark = "";
@@ -1146,9 +1132,9 @@ namespace ScadaFrame
             // 
             this.uiLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel7.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel7.Location = new System.Drawing.Point(20, 204);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel7.Size = new System.Drawing.Size(116, 34);
             this.uiLabel7.TabIndex = 0;
             this.uiLabel7.Text = "是否自动连接";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1158,9 +1144,9 @@ namespace ScadaFrame
             // 
             this.uiLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel8.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel8.Location = new System.Drawing.Point(20, 238);
             this.uiLabel8.Name = "uiLabel8";
-            this.uiLabel8.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel8.Size = new System.Drawing.Size(116, 34);
             this.uiLabel8.TabIndex = 0;
             this.uiLabel8.Text = "是否断线重连";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1170,9 +1156,9 @@ namespace ScadaFrame
             // 
             this.uiLabel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel9.Location = new System.Drawing.Point(4, 0);
+            this.uiLabel9.Location = new System.Drawing.Point(20, 272);
             this.uiLabel9.Name = "uiLabel9";
-            this.uiLabel9.Size = new System.Drawing.Size(2, 1);
+            this.uiLabel9.Size = new System.Drawing.Size(116, 34);
             this.uiLabel9.TabIndex = 0;
             this.uiLabel9.Text = "轮询时间";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1183,12 +1169,12 @@ namespace ScadaFrame
             this.tb_Siemens_Num.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Siemens_Num.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Siemens_Num.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_Siemens_Num.Location = new System.Drawing.Point(14, 5);
+            this.tb_Siemens_Num.Location = new System.Drawing.Point(160, 5);
             this.tb_Siemens_Num.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Siemens_Num.MinimumSize = new System.Drawing.Size(1, 16);
             this.tb_Siemens_Num.Name = "tb_Siemens_Num";
             this.tb_Siemens_Num.ShowText = false;
-            this.tb_Siemens_Num.Size = new System.Drawing.Size(4, 20);
+            this.tb_Siemens_Num.Size = new System.Drawing.Size(167, 24);
             this.tb_Siemens_Num.TabIndex = 1;
             this.tb_Siemens_Num.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tb_Siemens_Num.Watermark = "";
@@ -1199,12 +1185,12 @@ namespace ScadaFrame
             this.tb_Siemens_Back.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Siemens_Back.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Siemens_Back.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_Siemens_Back.Location = new System.Drawing.Point(14, 5);
+            this.tb_Siemens_Back.Location = new System.Drawing.Point(160, 141);
             this.tb_Siemens_Back.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_Siemens_Back.MinimumSize = new System.Drawing.Size(1, 16);
             this.tb_Siemens_Back.Name = "tb_Siemens_Back";
             this.tb_Siemens_Back.ShowText = false;
-            this.tb_Siemens_Back.Size = new System.Drawing.Size(4, 20);
+            this.tb_Siemens_Back.Size = new System.Drawing.Size(167, 24);
             this.tb_Siemens_Back.TabIndex = 4;
             this.tb_Siemens_Back.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.tb_Siemens_Back.Watermark = "";
@@ -1215,13 +1201,13 @@ namespace ScadaFrame
             this.uiGroupBox3.Controls.Add(this.tableLayoutPanel11);
             this.uiGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiGroupBox3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox3.Location = new System.Drawing.Point(4, 12);
+            this.uiGroupBox3.Location = new System.Drawing.Point(4, 396);
             this.uiGroupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox3.Name = "uiGroupBox3";
             this.uiGroupBox3.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
             this.uiGroupBox3.Radius = 45;
-            this.uiGroupBox3.Size = new System.Drawing.Size(24, 1);
+            this.uiGroupBox3.Size = new System.Drawing.Size(350, 224);
             this.uiGroupBox3.TabIndex = 2;
             this.uiGroupBox3.Text = "参数应用区域";
             this.uiGroupBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1247,7 +1233,7 @@ namespace ScadaFrame
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(24, 0);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(350, 192);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
             // bt_Siemens_Creat
@@ -1256,12 +1242,12 @@ namespace ScadaFrame
             this.bt_Siemens_Creat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_Siemens_Creat.FillColorGradient = true;
             this.bt_Siemens_Creat.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_Siemens_Creat.Location = new System.Drawing.Point(8, 4);
+            this.bt_Siemens_Creat.Location = new System.Drawing.Point(74, 4);
             this.bt_Siemens_Creat.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Siemens_Creat.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Siemens_Creat.Name = "bt_Siemens_Creat";
             this.bt_Siemens_Creat.Radius = 40;
-            this.bt_Siemens_Creat.Size = new System.Drawing.Size(6, 1);
+            this.bt_Siemens_Creat.Size = new System.Drawing.Size(202, 49);
             this.bt_Siemens_Creat.Symbol = 57602;
             this.bt_Siemens_Creat.TabIndex = 1;
             this.bt_Siemens_Creat.Text = "新建";
@@ -1275,12 +1261,12 @@ namespace ScadaFrame
             this.bt_Siemens_Modify.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_Siemens_Modify.FillColorGradient = true;
             this.bt_Siemens_Modify.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_Siemens_Modify.Location = new System.Drawing.Point(8, 4);
+            this.bt_Siemens_Modify.Location = new System.Drawing.Point(74, 65);
             this.bt_Siemens_Modify.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Siemens_Modify.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Siemens_Modify.Name = "bt_Siemens_Modify";
             this.bt_Siemens_Modify.Radius = 40;
-            this.bt_Siemens_Modify.Size = new System.Drawing.Size(6, 1);
+            this.bt_Siemens_Modify.Size = new System.Drawing.Size(202, 49);
             this.bt_Siemens_Modify.Symbol = 57602;
             this.bt_Siemens_Modify.TabIndex = 1;
             this.bt_Siemens_Modify.Text = "修改";
@@ -1294,12 +1280,12 @@ namespace ScadaFrame
             this.bt_Siemens_Delet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_Siemens_Delet.FillColorGradient = true;
             this.bt_Siemens_Delet.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_Siemens_Delet.Location = new System.Drawing.Point(8, 4);
+            this.bt_Siemens_Delet.Location = new System.Drawing.Point(74, 126);
             this.bt_Siemens_Delet.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Siemens_Delet.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Siemens_Delet.Name = "bt_Siemens_Delet";
             this.bt_Siemens_Delet.Radius = 40;
-            this.bt_Siemens_Delet.Size = new System.Drawing.Size(6, 1);
+            this.bt_Siemens_Delet.Size = new System.Drawing.Size(202, 49);
             this.bt_Siemens_Delet.Symbol = 57602;
             this.bt_Siemens_Delet.TabIndex = 1;
             this.bt_Siemens_Delet.Text = "删除";
@@ -2557,7 +2543,7 @@ namespace ScadaFrame
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(156, 54);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1577, 822);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // uiDataGridViewDevice
@@ -2621,7 +2607,7 @@ namespace ScadaFrame
             this.uiDataGridViewDevice.RowTemplate.Height = 23;
             this.uiDataGridViewDevice.SelectedIndex = -1;
             this.uiDataGridViewDevice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiDataGridViewDevice.Size = new System.Drawing.Size(150, 45);
+            this.uiDataGridViewDevice.Size = new System.Drawing.Size(1571, 774);
             this.uiDataGridViewDevice.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridViewDevice.TabIndex = 0;
             this.uiDataGridViewDevice.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -2762,11 +2748,11 @@ namespace ScadaFrame
             this.tableLayoutPanel5.Controls.Add(this.bt_Device_OnlineChange, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.bt_DeviceScan_Start, 4, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 54);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 783);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(150, 1);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1571, 36);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // bt_DeviceConfig_Input
@@ -2782,7 +2768,7 @@ namespace ScadaFrame
             this.bt_DeviceConfig_Input.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_DeviceConfig_Input.Name = "bt_DeviceConfig_Input";
             this.bt_DeviceConfig_Input.Radius = 20;
-            this.bt_DeviceConfig_Input.Size = new System.Drawing.Size(7, 1);
+            this.bt_DeviceConfig_Input.Size = new System.Drawing.Size(149, 28);
             this.bt_DeviceConfig_Input.Style = Sunny.UI.UIStyle.Custom;
             this.bt_DeviceConfig_Input.Symbol = 61584;
             this.bt_DeviceConfig_Input.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2800,12 +2786,12 @@ namespace ScadaFrame
             this.bt_DeviceConfig_Save.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_DeviceConfig_Save.FillColorGradient = true;
             this.bt_DeviceConfig_Save.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_DeviceConfig_Save.Location = new System.Drawing.Point(19, 4);
+            this.bt_DeviceConfig_Save.Location = new System.Drawing.Point(161, 4);
             this.bt_DeviceConfig_Save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_DeviceConfig_Save.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_DeviceConfig_Save.Name = "bt_DeviceConfig_Save";
             this.bt_DeviceConfig_Save.Radius = 20;
-            this.bt_DeviceConfig_Save.Size = new System.Drawing.Size(7, 1);
+            this.bt_DeviceConfig_Save.Size = new System.Drawing.Size(149, 28);
             this.bt_DeviceConfig_Save.Style = Sunny.UI.UIStyle.Custom;
             this.bt_DeviceConfig_Save.Symbol = 61639;
             this.bt_DeviceConfig_Save.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2823,12 +2809,12 @@ namespace ScadaFrame
             this.bt_DeviceConfig_Backup.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_DeviceConfig_Backup.FillColorGradient = true;
             this.bt_DeviceConfig_Backup.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_DeviceConfig_Backup.Location = new System.Drawing.Point(34, 4);
+            this.bt_DeviceConfig_Backup.Location = new System.Drawing.Point(318, 4);
             this.bt_DeviceConfig_Backup.Margin = new System.Windows.Forms.Padding(4);
             this.bt_DeviceConfig_Backup.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_DeviceConfig_Backup.Name = "bt_DeviceConfig_Backup";
             this.bt_DeviceConfig_Backup.Radius = 20;
-            this.bt_DeviceConfig_Backup.Size = new System.Drawing.Size(7, 1);
+            this.bt_DeviceConfig_Backup.Size = new System.Drawing.Size(149, 28);
             this.bt_DeviceConfig_Backup.Style = Sunny.UI.UIStyle.Custom;
             this.bt_DeviceConfig_Backup.Symbol = 61579;
             this.bt_DeviceConfig_Backup.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2846,12 +2832,12 @@ namespace ScadaFrame
             this.bt_DeviceScan_Stop.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_DeviceScan_Stop.FillColorGradient = true;
             this.bt_DeviceScan_Stop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_DeviceScan_Stop.Location = new System.Drawing.Point(79, 4);
+            this.bt_DeviceScan_Stop.Location = new System.Drawing.Point(789, 4);
             this.bt_DeviceScan_Stop.Margin = new System.Windows.Forms.Padding(4);
             this.bt_DeviceScan_Stop.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_DeviceScan_Stop.Name = "bt_DeviceScan_Stop";
             this.bt_DeviceScan_Stop.Radius = 20;
-            this.bt_DeviceScan_Stop.Size = new System.Drawing.Size(7, 1);
+            this.bt_DeviceScan_Stop.Size = new System.Drawing.Size(149, 28);
             this.bt_DeviceScan_Stop.Style = Sunny.UI.UIStyle.Custom;
             this.bt_DeviceScan_Stop.Symbol = 61516;
             this.bt_DeviceScan_Stop.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2869,12 +2855,12 @@ namespace ScadaFrame
             this.bt_Device_OnlineChange.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_Device_OnlineChange.FillColorGradient = true;
             this.bt_Device_OnlineChange.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_Device_OnlineChange.Location = new System.Drawing.Point(49, 4);
+            this.bt_Device_OnlineChange.Location = new System.Drawing.Point(475, 4);
             this.bt_Device_OnlineChange.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Device_OnlineChange.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_Device_OnlineChange.Name = "bt_Device_OnlineChange";
             this.bt_Device_OnlineChange.Radius = 20;
-            this.bt_Device_OnlineChange.Size = new System.Drawing.Size(7, 1);
+            this.bt_Device_OnlineChange.Size = new System.Drawing.Size(149, 28);
             this.bt_Device_OnlineChange.Style = Sunny.UI.UIStyle.Custom;
             this.bt_Device_OnlineChange.Symbol = 61676;
             this.bt_Device_OnlineChange.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2891,12 +2877,12 @@ namespace ScadaFrame
             this.bt_DeviceScan_Start.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_DeviceScan_Start.FillColorGradient = true;
             this.bt_DeviceScan_Start.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_DeviceScan_Start.Location = new System.Drawing.Point(64, 4);
+            this.bt_DeviceScan_Start.Location = new System.Drawing.Point(632, 4);
             this.bt_DeviceScan_Start.Margin = new System.Windows.Forms.Padding(4);
             this.bt_DeviceScan_Start.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_DeviceScan_Start.Name = "bt_DeviceScan_Start";
             this.bt_DeviceScan_Start.Radius = 20;
-            this.bt_DeviceScan_Start.Size = new System.Drawing.Size(7, 1);
+            this.bt_DeviceScan_Start.Size = new System.Drawing.Size(149, 28);
             this.bt_DeviceScan_Start.Style = Sunny.UI.UIStyle.Custom;
             this.bt_DeviceScan_Start.Symbol = 61515;
             this.bt_DeviceScan_Start.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -2911,7 +2897,7 @@ namespace ScadaFrame
             this.tabPageIOSet.Location = new System.Drawing.Point(0, 40);
             this.tabPageIOSet.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageIOSet.Name = "tabPageIOSet";
-            this.tabPageIOSet.Size = new System.Drawing.Size(200, 60);
+            this.tabPageIOSet.Size = new System.Drawing.Size(1947, 828);
             this.tabPageIOSet.TabIndex = 2;
             this.tabPageIOSet.Text = "2";
             this.tabPageIOSet.UseVisualStyleBackColor = true;
@@ -2921,7 +2907,7 @@ namespace ScadaFrame
             this.tabPageCurveNow.Location = new System.Drawing.Point(0, 40);
             this.tabPageCurveNow.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCurveNow.Name = "tabPageCurveNow";
-            this.tabPageCurveNow.Size = new System.Drawing.Size(200, 60);
+            this.tabPageCurveNow.Size = new System.Drawing.Size(1947, 828);
             this.tabPageCurveNow.TabIndex = 3;
             this.tabPageCurveNow.Text = "3";
             this.tabPageCurveNow.UseVisualStyleBackColor = true;
@@ -2987,19 +2973,23 @@ namespace ScadaFrame
             // 
             // tabPageHistoryRecodeSet
             // 
+            this.tabPageHistoryRecodeSet.Controls.Add(this.uiTextBox1);
             this.tabPageHistoryRecodeSet.Controls.Add(this.uiTextBox2);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.uiColorPicker2);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.uiColorPicker1);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.uiSymbolButton1);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.clrpk_curveColor);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.bt_HistoryRecode_choseFile);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.uiSymbolButton8);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.bt_HistoryRecode_query);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.bt_HistoryRecode_newFile);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.bt_HistoryRecode_addToFile);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.bt_HistoryRecode_Delet);
             this.tabPageHistoryRecodeSet.Controls.Add(this.bt_HistoryRecode_Change);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.CB_HistoryRecodeShowAlarmZone);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.CB_HistoryRecodeAlarmLine);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.uiCheckBox1);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.CB_HistoryRecodeShowAxis);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.uiComboBoxHistoryRecodeSelect);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.ckb_HistoryRecodeAlarmLine);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.ckb_showCurve);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.cbx_HistoryRecodeAdd);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.cbx_HistoryRecodeSelect);
             this.tabPageHistoryRecodeSet.Controls.Add(this.uiMarkLabel4);
-            this.tabPageHistoryRecodeSet.Controls.Add(this.uiMarkLabel6);
             this.tabPageHistoryRecodeSet.Controls.Add(this.uiMarkLabel2);
+            this.tabPageHistoryRecodeSet.Controls.Add(this.uiMarkLabel3);
             this.tabPageHistoryRecodeSet.Controls.Add(this.uiMarkLabel5);
             this.tabPageHistoryRecodeSet.Controls.Add(this.uiSymbolLabel4);
             this.tabPageHistoryRecodeSet.Controls.Add(this.uiSymbolLabel3);
@@ -3013,36 +3003,179 @@ namespace ScadaFrame
             this.tabPageHistoryRecodeSet.Text = "点位查询及画面布置";
             this.tabPageHistoryRecodeSet.UseVisualStyleBackColor = true;
             // 
+            // uiTextBox1
+            // 
+            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTextBox1.Location = new System.Drawing.Point(270, 197);
+            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
+            this.uiTextBox1.Name = "uiTextBox1";
+            this.uiTextBox1.ShowText = false;
+            this.uiTextBox1.Size = new System.Drawing.Size(54, 29);
+            this.uiTextBox1.TabIndex = 15;
+            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiTextBox1.Watermark = "";
+            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // uiTextBox2
             // 
             this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox2.Location = new System.Drawing.Point(224, 330);
+            this.uiTextBox2.Location = new System.Drawing.Point(208, 197);
             this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox2.Name = "uiTextBox2";
             this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(150, 29);
+            this.uiTextBox2.Size = new System.Drawing.Size(54, 29);
             this.uiTextBox2.TabIndex = 15;
             this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox2.Watermark = "";
             this.uiTextBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiColorPicker1
+            // clrpk_curveColor
             // 
-            this.uiColorPicker1.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.uiColorPicker1.FillColor = System.Drawing.Color.White;
-            this.uiColorPicker1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiColorPicker1.Location = new System.Drawing.Point(224, 247);
-            this.uiColorPicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiColorPicker1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiColorPicker1.Name = "uiColorPicker1";
-            this.uiColorPicker1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiColorPicker1.Size = new System.Drawing.Size(150, 29);
-            this.uiColorPicker1.TabIndex = 14;
-            this.uiColorPicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiColorPicker1.Watermark = "";
-            this.uiColorPicker1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.clrpk_curveColor.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.clrpk_curveColor.FillColor = System.Drawing.Color.White;
+            this.clrpk_curveColor.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.clrpk_curveColor.Location = new System.Drawing.Point(214, 373);
+            this.clrpk_curveColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.clrpk_curveColor.MinimumSize = new System.Drawing.Size(63, 0);
+            this.clrpk_curveColor.Name = "clrpk_curveColor";
+            this.clrpk_curveColor.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.clrpk_curveColor.Size = new System.Drawing.Size(150, 29);
+            this.clrpk_curveColor.TabIndex = 14;
+            this.clrpk_curveColor.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clrpk_curveColor.Watermark = "";
+            this.clrpk_curveColor.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // bt_HistoryRecode_choseFile
+            // 
+            this.bt_HistoryRecode_choseFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_HistoryRecode_choseFile.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.bt_HistoryRecode_choseFile.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.bt_HistoryRecode_choseFile.FillColorGradient = true;
+            this.bt_HistoryRecode_choseFile.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_choseFile.Location = new System.Drawing.Point(16, 240);
+            this.bt_HistoryRecode_choseFile.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_HistoryRecode_choseFile.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bt_HistoryRecode_choseFile.Name = "bt_HistoryRecode_choseFile";
+            this.bt_HistoryRecode_choseFile.Radius = 30;
+            this.bt_HistoryRecode_choseFile.Size = new System.Drawing.Size(345, 54);
+            this.bt_HistoryRecode_choseFile.Style = Sunny.UI.UIStyle.Custom;
+            this.bt_HistoryRecode_choseFile.Symbol = 57602;
+            this.bt_HistoryRecode_choseFile.SymbolColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_HistoryRecode_choseFile.TabIndex = 13;
+            this.bt_HistoryRecode_choseFile.Text = "文件选择";
+            this.bt_HistoryRecode_choseFile.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_choseFile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.bt_HistoryRecode_choseFile.Click += new System.EventHandler(this.bt_HistoryRecode_choseFile_Click);
+            // 
+            // uiSymbolButton8
+            // 
+            this.uiSymbolButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton8.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolButton8.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.uiSymbolButton8.FillColorGradient = true;
+            this.uiSymbolButton8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton8.Location = new System.Drawing.Point(331, 197);
+            this.uiSymbolButton8.Margin = new System.Windows.Forms.Padding(4);
+            this.uiSymbolButton8.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton8.Name = "uiSymbolButton8";
+            this.uiSymbolButton8.Radius = 20;
+            this.uiSymbolButton8.Size = new System.Drawing.Size(50, 29);
+            this.uiSymbolButton8.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolButton8.SymbolColor = System.Drawing.Color.WhiteSmoke;
+            this.uiSymbolButton8.TabIndex = 13;
+            this.uiSymbolButton8.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // bt_HistoryRecode_query
+            // 
+            this.bt_HistoryRecode_query.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_HistoryRecode_query.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.bt_HistoryRecode_query.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.bt_HistoryRecode_query.FillColorGradient = true;
+            this.bt_HistoryRecode_query.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_query.Location = new System.Drawing.Point(22, 109);
+            this.bt_HistoryRecode_query.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_HistoryRecode_query.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bt_HistoryRecode_query.Name = "bt_HistoryRecode_query";
+            this.bt_HistoryRecode_query.Radius = 30;
+            this.bt_HistoryRecode_query.Size = new System.Drawing.Size(342, 54);
+            this.bt_HistoryRecode_query.Style = Sunny.UI.UIStyle.Custom;
+            this.bt_HistoryRecode_query.Symbol = 57602;
+            this.bt_HistoryRecode_query.SymbolColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_HistoryRecode_query.TabIndex = 13;
+            this.bt_HistoryRecode_query.Text = "查询";
+            this.bt_HistoryRecode_query.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_query.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // bt_HistoryRecode_newFile
+            // 
+            this.bt_HistoryRecode_newFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_HistoryRecode_newFile.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.bt_HistoryRecode_newFile.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.bt_HistoryRecode_newFile.FillColorGradient = true;
+            this.bt_HistoryRecode_newFile.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_newFile.Location = new System.Drawing.Point(196, 672);
+            this.bt_HistoryRecode_newFile.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_HistoryRecode_newFile.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bt_HistoryRecode_newFile.Name = "bt_HistoryRecode_newFile";
+            this.bt_HistoryRecode_newFile.Radius = 30;
+            this.bt_HistoryRecode_newFile.Size = new System.Drawing.Size(175, 54);
+            this.bt_HistoryRecode_newFile.Style = Sunny.UI.UIStyle.Custom;
+            this.bt_HistoryRecode_newFile.Symbol = 57602;
+            this.bt_HistoryRecode_newFile.SymbolColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_HistoryRecode_newFile.TabIndex = 13;
+            this.bt_HistoryRecode_newFile.Text = "新建文件夹";
+            this.bt_HistoryRecode_newFile.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_newFile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.bt_HistoryRecode_newFile.Click += new System.EventHandler(this.bt_HistoryRecode_newFile_Click);
+            // 
+            // bt_HistoryRecode_addToFile
+            // 
+            this.bt_HistoryRecode_addToFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_HistoryRecode_addToFile.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.bt_HistoryRecode_addToFile.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.bt_HistoryRecode_addToFile.FillColorGradient = true;
+            this.bt_HistoryRecode_addToFile.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_addToFile.Location = new System.Drawing.Point(15, 672);
+            this.bt_HistoryRecode_addToFile.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_HistoryRecode_addToFile.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bt_HistoryRecode_addToFile.Name = "bt_HistoryRecode_addToFile";
+            this.bt_HistoryRecode_addToFile.Radius = 30;
+            this.bt_HistoryRecode_addToFile.Size = new System.Drawing.Size(175, 54);
+            this.bt_HistoryRecode_addToFile.Style = Sunny.UI.UIStyle.Custom;
+            this.bt_HistoryRecode_addToFile.Symbol = 57602;
+            this.bt_HistoryRecode_addToFile.SymbolColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_HistoryRecode_addToFile.TabIndex = 13;
+            this.bt_HistoryRecode_addToFile.Text = "添加至当前文件夹";
+            this.bt_HistoryRecode_addToFile.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_addToFile.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.bt_HistoryRecode_addToFile.Click += new System.EventHandler(this.bt_HistoryRecode_addToFile_Click);
+            // 
+            // bt_HistoryRecode_Delet
+            // 
+            this.bt_HistoryRecode_Delet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_HistoryRecode_Delet.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.bt_HistoryRecode_Delet.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.bt_HistoryRecode_Delet.FillColorGradient = true;
+            this.bt_HistoryRecode_Delet.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_Delet.Location = new System.Drawing.Point(191, 522);
+            this.bt_HistoryRecode_Delet.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_HistoryRecode_Delet.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bt_HistoryRecode_Delet.Name = "bt_HistoryRecode_Delet";
+            this.bt_HistoryRecode_Delet.Radius = 30;
+            this.bt_HistoryRecode_Delet.Size = new System.Drawing.Size(142, 54);
+            this.bt_HistoryRecode_Delet.Style = Sunny.UI.UIStyle.Custom;
+            this.bt_HistoryRecode_Delet.Symbol = 57602;
+            this.bt_HistoryRecode_Delet.SymbolColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_HistoryRecode_Delet.TabIndex = 13;
+            this.bt_HistoryRecode_Delet.Text = "删除点位";
+            this.bt_HistoryRecode_Delet.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_HistoryRecode_Delet.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.bt_HistoryRecode_Delet.Click += new System.EventHandler(this.bt_HistoryRecode_Delet_Click);
             // 
             // bt_HistoryRecode_Change
             // 
@@ -3052,12 +3185,12 @@ namespace ScadaFrame
             this.bt_HistoryRecode_Change.FillColor2 = System.Drawing.Color.CornflowerBlue;
             this.bt_HistoryRecode_Change.FillColorGradient = true;
             this.bt_HistoryRecode_Change.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_HistoryRecode_Change.Location = new System.Drawing.Point(23, 569);
+            this.bt_HistoryRecode_Change.Location = new System.Drawing.Point(16, 522);
             this.bt_HistoryRecode_Change.Margin = new System.Windows.Forms.Padding(4);
             this.bt_HistoryRecode_Change.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_HistoryRecode_Change.Name = "bt_HistoryRecode_Change";
             this.bt_HistoryRecode_Change.Radius = 30;
-            this.bt_HistoryRecode_Change.Size = new System.Drawing.Size(342, 54);
+            this.bt_HistoryRecode_Change.Size = new System.Drawing.Size(142, 54);
             this.bt_HistoryRecode_Change.Style = Sunny.UI.UIStyle.Custom;
             this.bt_HistoryRecode_Change.Symbol = 57602;
             this.bt_HistoryRecode_Change.SymbolColor = System.Drawing.Color.WhiteSmoke;
@@ -3067,99 +3200,85 @@ namespace ScadaFrame
             this.bt_HistoryRecode_Change.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.bt_HistoryRecode_Change.Click += new System.EventHandler(this.bt_HistoryRecode_Change_Click);
             // 
-            // CB_HistoryRecodeShowAlarmZone
+            // ckb_HistoryRecodeAlarmLine
             // 
-            this.CB_HistoryRecodeShowAlarmZone.CheckBoxColor = System.Drawing.Color.LightSeaGreen;
-            this.CB_HistoryRecodeShowAlarmZone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CB_HistoryRecodeShowAlarmZone.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CB_HistoryRecodeShowAlarmZone.ImageInterval = 5;
-            this.CB_HistoryRecodeShowAlarmZone.ImageSize = 20;
-            this.CB_HistoryRecodeShowAlarmZone.Location = new System.Drawing.Point(15, 515);
-            this.CB_HistoryRecodeShowAlarmZone.MinimumSize = new System.Drawing.Size(1, 1);
-            this.CB_HistoryRecodeShowAlarmZone.Name = "CB_HistoryRecodeShowAlarmZone";
-            this.CB_HistoryRecodeShowAlarmZone.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.CB_HistoryRecodeShowAlarmZone.Size = new System.Drawing.Size(196, 29);
-            this.CB_HistoryRecodeShowAlarmZone.Style = Sunny.UI.UIStyle.Custom;
-            this.CB_HistoryRecodeShowAlarmZone.TabIndex = 12;
-            this.CB_HistoryRecodeShowAlarmZone.Text = "是否标记报警区域";
-            this.CB_HistoryRecodeShowAlarmZone.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ckb_HistoryRecodeAlarmLine.CheckBoxColor = System.Drawing.Color.LightSeaGreen;
+            this.ckb_HistoryRecodeAlarmLine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ckb_HistoryRecodeAlarmLine.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ckb_HistoryRecodeAlarmLine.ImageInterval = 5;
+            this.ckb_HistoryRecodeAlarmLine.ImageSize = 20;
+            this.ckb_HistoryRecodeAlarmLine.Location = new System.Drawing.Point(4, 475);
+            this.ckb_HistoryRecodeAlarmLine.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ckb_HistoryRecodeAlarmLine.Name = "ckb_HistoryRecodeAlarmLine";
+            this.ckb_HistoryRecodeAlarmLine.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.ckb_HistoryRecodeAlarmLine.Size = new System.Drawing.Size(225, 29);
+            this.ckb_HistoryRecodeAlarmLine.Style = Sunny.UI.UIStyle.Custom;
+            this.ckb_HistoryRecodeAlarmLine.TabIndex = 12;
+            this.ckb_HistoryRecodeAlarmLine.Text = "是否显示报警值参考线";
+            this.ckb_HistoryRecodeAlarmLine.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // CB_HistoryRecodeAlarmLine
+            // ckb_showCurve
             // 
-            this.CB_HistoryRecodeAlarmLine.CheckBoxColor = System.Drawing.Color.LightSeaGreen;
-            this.CB_HistoryRecodeAlarmLine.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CB_HistoryRecodeAlarmLine.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CB_HistoryRecodeAlarmLine.ImageInterval = 5;
-            this.CB_HistoryRecodeAlarmLine.ImageSize = 20;
-            this.CB_HistoryRecodeAlarmLine.Location = new System.Drawing.Point(15, 421);
-            this.CB_HistoryRecodeAlarmLine.MinimumSize = new System.Drawing.Size(1, 1);
-            this.CB_HistoryRecodeAlarmLine.Name = "CB_HistoryRecodeAlarmLine";
-            this.CB_HistoryRecodeAlarmLine.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.CB_HistoryRecodeAlarmLine.Size = new System.Drawing.Size(225, 29);
-            this.CB_HistoryRecodeAlarmLine.Style = Sunny.UI.UIStyle.Custom;
-            this.CB_HistoryRecodeAlarmLine.TabIndex = 12;
-            this.CB_HistoryRecodeAlarmLine.Text = "是否显示报警值参考线";
-            this.CB_HistoryRecodeAlarmLine.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.ckb_showCurve.CheckBoxColor = System.Drawing.Color.LightSeaGreen;
+            this.ckb_showCurve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ckb_showCurve.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ckb_showCurve.ImageInterval = 5;
+            this.ckb_showCurve.ImageSize = 20;
+            this.ckb_showCurve.Location = new System.Drawing.Point(4, 428);
+            this.ckb_showCurve.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ckb_showCurve.Name = "ckb_showCurve";
+            this.ckb_showCurve.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.ckb_showCurve.Size = new System.Drawing.Size(153, 29);
+            this.ckb_showCurve.Style = Sunny.UI.UIStyle.Custom;
+            this.ckb_showCurve.TabIndex = 12;
+            this.ckb_showCurve.Text = "是否显示曲线";
+            this.ckb_showCurve.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiCheckBox1
+            // cbx_HistoryRecodeAdd
             // 
-            this.uiCheckBox1.CheckBoxColor = System.Drawing.Color.LightSeaGreen;
-            this.uiCheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiCheckBox1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiCheckBox1.ImageInterval = 5;
-            this.uiCheckBox1.ImageSize = 20;
-            this.uiCheckBox1.Location = new System.Drawing.Point(15, 374);
-            this.uiCheckBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiCheckBox1.Name = "uiCheckBox1";
-            this.uiCheckBox1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.uiCheckBox1.Size = new System.Drawing.Size(153, 29);
-            this.uiCheckBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiCheckBox1.TabIndex = 12;
-            this.uiCheckBox1.Text = "是否显示曲线";
-            this.uiCheckBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.cbx_HistoryRecodeAdd.DataSource = null;
+            this.cbx_HistoryRecodeAdd.FillColor = System.Drawing.Color.White;
+            this.cbx_HistoryRecodeAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbx_HistoryRecodeAdd.Location = new System.Drawing.Point(211, 617);
+            this.cbx_HistoryRecodeAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbx_HistoryRecodeAdd.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbx_HistoryRecodeAdd.Name = "cbx_HistoryRecodeAdd";
+            this.cbx_HistoryRecodeAdd.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbx_HistoryRecodeAdd.RectColor = System.Drawing.Color.LightSteelBlue;
+            this.cbx_HistoryRecodeAdd.Size = new System.Drawing.Size(150, 29);
+            this.cbx_HistoryRecodeAdd.Style = Sunny.UI.UIStyle.Custom;
+            this.cbx_HistoryRecodeAdd.TabIndex = 11;
+            this.cbx_HistoryRecodeAdd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbx_HistoryRecodeAdd.Watermark = "";
+            this.cbx_HistoryRecodeAdd.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // CB_HistoryRecodeShowAxis
+            // cbx_HistoryRecodeSelect
             // 
-            this.CB_HistoryRecodeShowAxis.CheckBoxColor = System.Drawing.Color.LightSeaGreen;
-            this.CB_HistoryRecodeShowAxis.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CB_HistoryRecodeShowAxis.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CB_HistoryRecodeShowAxis.ImageInterval = 5;
-            this.CB_HistoryRecodeShowAxis.ImageSize = 20;
-            this.CB_HistoryRecodeShowAxis.Location = new System.Drawing.Point(15, 468);
-            this.CB_HistoryRecodeShowAxis.MinimumSize = new System.Drawing.Size(1, 1);
-            this.CB_HistoryRecodeShowAxis.Name = "CB_HistoryRecodeShowAxis";
-            this.CB_HistoryRecodeShowAxis.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.CB_HistoryRecodeShowAxis.Size = new System.Drawing.Size(172, 29);
-            this.CB_HistoryRecodeShowAxis.Style = Sunny.UI.UIStyle.Custom;
-            this.CB_HistoryRecodeShowAxis.TabIndex = 12;
-            this.CB_HistoryRecodeShowAxis.Text = "是否显示坐标轴";
-            this.CB_HistoryRecodeShowAxis.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiComboBoxHistoryRecodeSelect
-            // 
-            this.uiComboBoxHistoryRecodeSelect.DataSource = null;
-            this.uiComboBoxHistoryRecodeSelect.FillColor = System.Drawing.Color.White;
-            this.uiComboBoxHistoryRecodeSelect.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiComboBoxHistoryRecodeSelect.Location = new System.Drawing.Point(224, 197);
-            this.uiComboBoxHistoryRecodeSelect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBoxHistoryRecodeSelect.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBoxHistoryRecodeSelect.Name = "uiComboBoxHistoryRecodeSelect";
-            this.uiComboBoxHistoryRecodeSelect.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBoxHistoryRecodeSelect.RectColor = System.Drawing.Color.LightSteelBlue;
-            this.uiComboBoxHistoryRecodeSelect.Size = new System.Drawing.Size(150, 29);
-            this.uiComboBoxHistoryRecodeSelect.Style = Sunny.UI.UIStyle.Custom;
-            this.uiComboBoxHistoryRecodeSelect.TabIndex = 11;
-            this.uiComboBoxHistoryRecodeSelect.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBoxHistoryRecodeSelect.Watermark = "";
-            this.uiComboBoxHistoryRecodeSelect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.cbx_HistoryRecodeSelect.DataSource = null;
+            this.cbx_HistoryRecodeSelect.FillColor = System.Drawing.Color.White;
+            this.cbx_HistoryRecodeSelect.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbx_HistoryRecodeSelect.Location = new System.Drawing.Point(214, 323);
+            this.cbx_HistoryRecodeSelect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbx_HistoryRecodeSelect.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbx_HistoryRecodeSelect.Name = "cbx_HistoryRecodeSelect";
+            this.cbx_HistoryRecodeSelect.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbx_HistoryRecodeSelect.RectColor = System.Drawing.Color.LightSteelBlue;
+            this.cbx_HistoryRecodeSelect.Size = new System.Drawing.Size(150, 29);
+            this.cbx_HistoryRecodeSelect.Style = Sunny.UI.UIStyle.Custom;
+            this.cbx_HistoryRecodeSelect.TabIndex = 11;
+            this.cbx_HistoryRecodeSelect.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbx_HistoryRecodeSelect.Watermark = "";
+            this.cbx_HistoryRecodeSelect.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.cbx_HistoryRecodeSelect.SelectedIndexChanged += new System.EventHandler(this.cbx_HistoryRecodeSelect_SelectedIndexChanged);
+            this.cbx_HistoryRecodeSelect.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbx_HistoryRecodeSelect_MouseClick);
             // 
             // uiMarkLabel4
             // 
             this.uiMarkLabel4.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiMarkLabel4.Location = new System.Drawing.Point(27, 333);
+            this.uiMarkLabel4.Location = new System.Drawing.Point(11, 200);
             this.uiMarkLabel4.Name = "uiMarkLabel4";
             this.uiMarkLabel4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.uiMarkLabel4.Size = new System.Drawing.Size(196, 23);
+            this.uiMarkLabel4.Size = new System.Drawing.Size(190, 23);
             this.uiMarkLabel4.TabIndex = 10;
             this.uiMarkLabel4.Text = "指定数值轴显示范围";
             this.uiMarkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3168,7 +3287,7 @@ namespace ScadaFrame
             // uiMarkLabel2
             // 
             this.uiMarkLabel2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiMarkLabel2.Location = new System.Drawing.Point(27, 247);
+            this.uiMarkLabel2.Location = new System.Drawing.Point(17, 373);
             this.uiMarkLabel2.Name = "uiMarkLabel2";
             this.uiMarkLabel2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.uiMarkLabel2.Size = new System.Drawing.Size(141, 23);
@@ -3177,10 +3296,22 @@ namespace ScadaFrame
             this.uiMarkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiMarkLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // uiMarkLabel3
+            // 
+            this.uiMarkLabel3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiMarkLabel3.Location = new System.Drawing.Point(13, 617);
+            this.uiMarkLabel3.Name = "uiMarkLabel3";
+            this.uiMarkLabel3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.uiMarkLabel3.Size = new System.Drawing.Size(141, 23);
+            this.uiMarkLabel3.TabIndex = 10;
+            this.uiMarkLabel3.Text = "添加点位";
+            this.uiMarkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiMarkLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // uiMarkLabel5
             // 
             this.uiMarkLabel5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiMarkLabel5.Location = new System.Drawing.Point(26, 197);
+            this.uiMarkLabel5.Location = new System.Drawing.Point(16, 323);
             this.uiMarkLabel5.Name = "uiMarkLabel5";
             this.uiMarkLabel5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.uiMarkLabel5.Size = new System.Drawing.Size(141, 23);
@@ -3269,206 +3400,12 @@ namespace ScadaFrame
             // 
             // tabPageHistoryRecodeCollect
             // 
-            this.tabPageHistoryRecodeCollect.Controls.Add(this.tableLayoutPanel24);
             this.tabPageHistoryRecodeCollect.Location = new System.Drawing.Point(0, 40);
             this.tabPageHistoryRecodeCollect.Name = "tabPageHistoryRecodeCollect";
-            this.tabPageHistoryRecodeCollect.Size = new System.Drawing.Size(384, 782);
+            this.tabPageHistoryRecodeCollect.Size = new System.Drawing.Size(200, 60);
             this.tabPageHistoryRecodeCollect.TabIndex = 1;
             this.tabPageHistoryRecodeCollect.Text = "常用点位配置";
             this.tabPageHistoryRecodeCollect.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel24
-            // 
-            this.tableLayoutPanel24.ColumnCount = 1;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 1);
-            this.tableLayoutPanel24.Controls.Add(this.uiDataGridViewHistoryRecode, 0, 0);
-            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 2;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(384, 782);
-            this.tableLayoutPanel24.TabIndex = 0;
-            // 
-            // tableLayoutPanel25
-            // 
-            this.tableLayoutPanel25.ColumnCount = 3;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel25.Controls.Add(this.uiSymbolButton2, 1, 0);
-            this.tableLayoutPanel25.Controls.Add(this.uiSymbolButton5, 1, 3);
-            this.tableLayoutPanel25.Controls.Add(this.uiSymbolButton3, 1, 1);
-            this.tableLayoutPanel25.Controls.Add(this.uiSymbolButton4, 1, 2);
-            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 472);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            this.tableLayoutPanel25.RowCount = 4;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(378, 307);
-            this.tableLayoutPanel25.TabIndex = 4;
-            // 
-            // uiSymbolButton2
-            // 
-            this.uiSymbolButton2.ContextMenuStrip = this.CMS_FlowSelect;
-            this.uiSymbolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiSymbolButton2.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.uiSymbolButton2.FillColor2 = System.Drawing.Color.CornflowerBlue;
-            this.uiSymbolButton2.FillColorGradient = true;
-            this.uiSymbolButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton2.Location = new System.Drawing.Point(79, 4);
-            this.uiSymbolButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.uiSymbolButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton2.Name = "uiSymbolButton2";
-            this.uiSymbolButton2.Radius = 50;
-            this.uiSymbolButton2.Size = new System.Drawing.Size(218, 68);
-            this.uiSymbolButton2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton2.Symbol = 57602;
-            this.uiSymbolButton2.SymbolColor = System.Drawing.Color.WhiteSmoke;
-            this.uiSymbolButton2.TabIndex = 2;
-            this.uiSymbolButton2.Text = "打开配置文件";
-            this.uiSymbolButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolButton5
-            // 
-            this.uiSymbolButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiSymbolButton5.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.uiSymbolButton5.FillColor2 = System.Drawing.Color.CornflowerBlue;
-            this.uiSymbolButton5.FillColorGradient = true;
-            this.uiSymbolButton5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton5.Location = new System.Drawing.Point(79, 232);
-            this.uiSymbolButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.uiSymbolButton5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton5.Name = "uiSymbolButton5";
-            this.uiSymbolButton5.Radius = 50;
-            this.uiSymbolButton5.Size = new System.Drawing.Size(218, 71);
-            this.uiSymbolButton5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton5.Symbol = 57602;
-            this.uiSymbolButton5.SymbolColor = System.Drawing.Color.WhiteSmoke;
-            this.uiSymbolButton5.TabIndex = 2;
-            this.uiSymbolButton5.Text = "另存为配置文件";
-            this.uiSymbolButton5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolButton3
-            // 
-            this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiSymbolButton3.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.uiSymbolButton3.FillColor2 = System.Drawing.Color.CornflowerBlue;
-            this.uiSymbolButton3.FillColorGradient = true;
-            this.uiSymbolButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton3.Location = new System.Drawing.Point(79, 80);
-            this.uiSymbolButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.uiSymbolButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton3.Name = "uiSymbolButton3";
-            this.uiSymbolButton3.Radius = 50;
-            this.uiSymbolButton3.Size = new System.Drawing.Size(218, 68);
-            this.uiSymbolButton3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton3.Symbol = 57602;
-            this.uiSymbolButton3.SymbolColor = System.Drawing.Color.WhiteSmoke;
-            this.uiSymbolButton3.TabIndex = 2;
-            this.uiSymbolButton3.Text = "新建配置文件";
-            this.uiSymbolButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolButton4
-            // 
-            this.uiSymbolButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiSymbolButton4.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.uiSymbolButton4.FillColor2 = System.Drawing.Color.CornflowerBlue;
-            this.uiSymbolButton4.FillColorGradient = true;
-            this.uiSymbolButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton4.Location = new System.Drawing.Point(79, 156);
-            this.uiSymbolButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.uiSymbolButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton4.Name = "uiSymbolButton4";
-            this.uiSymbolButton4.Radius = 50;
-            this.uiSymbolButton4.Size = new System.Drawing.Size(218, 68);
-            this.uiSymbolButton4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton4.Symbol = 57602;
-            this.uiSymbolButton4.SymbolColor = System.Drawing.Color.WhiteSmoke;
-            this.uiSymbolButton4.TabIndex = 2;
-            this.uiSymbolButton4.Text = "保存配置文件";
-            this.uiSymbolButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiDataGridViewHistoryRecode
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LavenderBlush;
-            this.uiDataGridViewHistoryRecode.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.uiDataGridViewHistoryRecode.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.uiDataGridViewHistoryRecode.BackgroundColor = System.Drawing.Color.LightGray;
-            this.uiDataGridViewHistoryRecode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.uiDataGridViewHistoryRecode.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.uiDataGridViewHistoryRecode.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewHistoryRecode.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.uiDataGridViewHistoryRecode.ColumnHeadersHeight = 32;
-            this.uiDataGridViewHistoryRecode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.uiDataGridViewHistoryRecode.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnHistoryRecodeName,
-            this.ColumnHistoryRecodeConfig});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewHistoryRecode.DefaultCellStyle = dataGridViewCellStyle8;
-            this.uiDataGridViewHistoryRecode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiDataGridViewHistoryRecode.EnableHeadersVisualStyles = false;
-            this.uiDataGridViewHistoryRecode.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridViewHistoryRecode.GridColor = System.Drawing.Color.Silver;
-            this.uiDataGridViewHistoryRecode.Location = new System.Drawing.Point(3, 3);
-            this.uiDataGridViewHistoryRecode.Name = "uiDataGridViewHistoryRecode";
-            this.uiDataGridViewHistoryRecode.RectColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewHistoryRecode.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.uiDataGridViewHistoryRecode.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridViewHistoryRecode.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.uiDataGridViewHistoryRecode.RowTemplate.Height = 23;
-            this.uiDataGridViewHistoryRecode.SelectedIndex = -1;
-            this.uiDataGridViewHistoryRecode.Size = new System.Drawing.Size(378, 463);
-            this.uiDataGridViewHistoryRecode.StripeOddColor = System.Drawing.Color.LavenderBlush;
-            this.uiDataGridViewHistoryRecode.TabIndex = 0;
-            this.uiDataGridViewHistoryRecode.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // ColumnHistoryRecodeName
-            // 
-            this.ColumnHistoryRecodeName.HeaderText = "点名";
-            this.ColumnHistoryRecodeName.Name = "ColumnHistoryRecodeName";
-            // 
-            // ColumnHistoryRecodeConfig
-            // 
-            this.ColumnHistoryRecodeConfig.HeaderText = "配置";
-            this.ColumnHistoryRecodeConfig.Name = "ColumnHistoryRecodeConfig";
             // 
             // tabPageAlarm
             // 
@@ -3694,20 +3631,20 @@ namespace ScadaFrame
             // 
             this.uiDataGridViewAlarmHistory.AllowUserToAddRows = false;
             this.uiDataGridViewAlarmHistory.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridViewAlarmHistory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiDataGridViewAlarmHistory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.uiDataGridViewAlarmHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uiDataGridViewAlarmHistory.BackgroundColor = System.Drawing.Color.LightGray;
             this.uiDataGridViewAlarmHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.uiDataGridViewAlarmHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewAlarmHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewAlarmHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.uiDataGridViewAlarmHistory.ColumnHeadersHeight = 32;
             this.uiDataGridViewAlarmHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridViewAlarmHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3719,14 +3656,14 @@ namespace ScadaFrame
             this.ColumnType,
             this.ColumnValue,
             this.ColumnUser});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewAlarmHistory.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridViewAlarmHistory.DefaultCellStyle = dataGridViewCellStyle8;
             this.uiDataGridViewAlarmHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridViewAlarmHistory.EnableHeadersVisualStyles = false;
             this.uiDataGridViewAlarmHistory.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -3734,20 +3671,20 @@ namespace ScadaFrame
             this.uiDataGridViewAlarmHistory.Location = new System.Drawing.Point(3, 60);
             this.uiDataGridViewAlarmHistory.Name = "uiDataGridViewAlarmHistory";
             this.uiDataGridViewAlarmHistory.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewAlarmHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewAlarmHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.uiDataGridViewAlarmHistory.RowHeadersVisible = false;
             this.uiDataGridViewAlarmHistory.RowHeadersWidth = 51;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridViewAlarmHistory.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiDataGridViewAlarmHistory.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.uiDataGridViewAlarmHistory.RowTemplate.Height = 23;
             this.uiDataGridViewAlarmHistory.SelectedIndex = -1;
             this.uiDataGridViewAlarmHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -3817,7 +3754,7 @@ namespace ScadaFrame
             this.tabPageLog.Location = new System.Drawing.Point(0, 40);
             this.tabPageLog.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageLog.Name = "tabPageLog";
-            this.tabPageLog.Size = new System.Drawing.Size(1947, 828);
+            this.tabPageLog.Size = new System.Drawing.Size(200, 60);
             this.tabPageLog.TabIndex = 6;
             this.tabPageLog.Text = "6";
             this.tabPageLog.UseVisualStyleBackColor = true;
@@ -3830,7 +3767,7 @@ namespace ScadaFrame
             this.tabPageDataBase.Location = new System.Drawing.Point(0, 40);
             this.tabPageDataBase.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDataBase.Name = "tabPageDataBase";
-            this.tabPageDataBase.Size = new System.Drawing.Size(1947, 828);
+            this.tabPageDataBase.Size = new System.Drawing.Size(200, 60);
             this.tabPageDataBase.TabIndex = 7;
             this.tabPageDataBase.Text = "7";
             this.tabPageDataBase.UseVisualStyleBackColor = true;
@@ -3848,25 +3785,25 @@ namespace ScadaFrame
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1650, 828);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(0, 60);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // uiDataGridViewDB
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.uiDataGridViewDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiDataGridViewDB.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.uiDataGridViewDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uiDataGridViewDB.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiDataGridViewDB.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.uiDataGridViewDB.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewDB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.uiDataGridViewDB.ColumnHeadersHeight = 32;
             this.uiDataGridViewDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridViewDB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3886,14 +3823,14 @@ namespace ScadaFrame
             this.ColumnUnits,
             this.ColumnDeadZone});
             this.uiDataGridViewDB.ContextMenuStrip = this.CMS_DataGrid;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewDB.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridViewDB.DefaultCellStyle = dataGridViewCellStyle13;
             this.uiDataGridViewDB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridViewDB.EnableHeadersVisualStyles = false;
             this.uiDataGridViewDB.EnterAsTab = true;
@@ -3903,24 +3840,24 @@ namespace ScadaFrame
             this.uiDataGridViewDB.Margin = new System.Windows.Forms.Padding(4);
             this.uiDataGridViewDB.Name = "uiDataGridViewDB";
             this.uiDataGridViewDB.RectColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewDB.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewDB.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.uiDataGridViewDB.RowHeadersVisible = false;
             this.uiDataGridViewDB.RowHeadersWidth = 51;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridViewDB.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiDataGridViewDB.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.uiDataGridViewDB.RowTemplate.Height = 23;
             this.uiDataGridViewDB.ScrollBarColor = System.Drawing.Color.Gray;
             this.uiDataGridViewDB.SelectedIndex = -1;
             this.uiDataGridViewDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiDataGridViewDB.Size = new System.Drawing.Size(1642, 820);
+            this.uiDataGridViewDB.Size = new System.Drawing.Size(1, 52);
             this.uiDataGridViewDB.Style = Sunny.UI.UIStyle.Custom;
             this.uiDataGridViewDB.TabIndex = 0;
             this.uiDataGridViewDB.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -4082,9 +4019,9 @@ namespace ScadaFrame
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1650, 0);
+            this.panel1.Location = new System.Drawing.Point(-97, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 828);
+            this.panel1.Size = new System.Drawing.Size(297, 60);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -4100,7 +4037,7 @@ namespace ScadaFrame
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(297, 828);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(297, 60);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // uiGroupBox1
@@ -4115,7 +4052,7 @@ namespace ScadaFrame
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 58, 0, 0);
             this.uiGroupBox1.Radius = 45;
-            this.uiGroupBox1.Size = new System.Drawing.Size(289, 321);
+            this.uiGroupBox1.Size = new System.Drawing.Size(289, 14);
             this.uiGroupBox1.TabIndex = 11;
             this.uiGroupBox1.Text = "点表文件操作";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4143,7 +4080,7 @@ namespace ScadaFrame
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(289, 263);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(289, 0);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // bt_PointConfig_Input
@@ -4152,12 +4089,12 @@ namespace ScadaFrame
             this.bt_PointConfig_Input.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_Input.FillColorGradient = true;
             this.bt_PointConfig_Input.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_Input.Location = new System.Drawing.Point(61, 10);
+            this.bt_PointConfig_Input.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_Input.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_Input.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_Input.Name = "bt_PointConfig_Input";
             this.bt_PointConfig_Input.Radius = 50;
-            this.bt_PointConfig_Input.Size = new System.Drawing.Size(165, 70);
+            this.bt_PointConfig_Input.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_Input.Symbol = 61564;
             this.bt_PointConfig_Input.TabIndex = 2;
             this.bt_PointConfig_Input.Text = "导入点表";
@@ -4171,12 +4108,12 @@ namespace ScadaFrame
             this.bt_PointConfig_Backup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_Backup.FillColorGradient = true;
             this.bt_PointConfig_Backup.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_Backup.Location = new System.Drawing.Point(61, 178);
+            this.bt_PointConfig_Backup.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_Backup.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_Backup.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_Backup.Name = "bt_PointConfig_Backup";
             this.bt_PointConfig_Backup.Radius = 50;
-            this.bt_PointConfig_Backup.Size = new System.Drawing.Size(165, 70);
+            this.bt_PointConfig_Backup.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_Backup.Symbol = 61579;
             this.bt_PointConfig_Backup.TabIndex = 2;
             this.bt_PointConfig_Backup.Text = "备份点表";
@@ -4190,12 +4127,12 @@ namespace ScadaFrame
             this.bt_PointConfig_Save.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_Save.FillColorGradient = true;
             this.bt_PointConfig_Save.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_Save.Location = new System.Drawing.Point(61, 94);
+            this.bt_PointConfig_Save.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_Save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_Save.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_Save.Name = "bt_PointConfig_Save";
             this.bt_PointConfig_Save.Radius = 50;
-            this.bt_PointConfig_Save.Size = new System.Drawing.Size(165, 70);
+            this.bt_PointConfig_Save.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_Save.Symbol = 61639;
             this.bt_PointConfig_Save.TabIndex = 2;
             this.bt_PointConfig_Save.Text = "保存点表";
@@ -4209,13 +4146,13 @@ namespace ScadaFrame
             this.uiGroupBox2.Controls.Add(this.tableLayoutPanel7);
             this.uiGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiGroupBox2.Location = new System.Drawing.Point(4, 336);
+            this.uiGroupBox2.Location = new System.Drawing.Point(4, 29);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 58, 0, 0);
             this.uiGroupBox2.Radius = 50;
-            this.uiGroupBox2.Size = new System.Drawing.Size(289, 238);
+            this.uiGroupBox2.Size = new System.Drawing.Size(289, 8);
             this.uiGroupBox2.TabIndex = 10;
             this.uiGroupBox2.Text = "在线修改及监控";
             this.uiGroupBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4240,7 +4177,7 @@ namespace ScadaFrame
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.5F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(289, 180);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(289, 0);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // bt_PointConfig_OnlineChange
@@ -4249,12 +4186,12 @@ namespace ScadaFrame
             this.bt_PointConfig_OnlineChange.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_OnlineChange.FillColorGradient = true;
             this.bt_PointConfig_OnlineChange.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_OnlineChange.Location = new System.Drawing.Point(61, 98);
+            this.bt_PointConfig_OnlineChange.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_OnlineChange.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_OnlineChange.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_OnlineChange.Name = "bt_PointConfig_OnlineChange";
             this.bt_PointConfig_OnlineChange.Radius = 50;
-            this.bt_PointConfig_OnlineChange.Size = new System.Drawing.Size(165, 68);
+            this.bt_PointConfig_OnlineChange.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_OnlineChange.Symbol = 61564;
             this.bt_PointConfig_OnlineChange.TabIndex = 2;
             this.bt_PointConfig_OnlineChange.Text = "在线应用";
@@ -4267,12 +4204,12 @@ namespace ScadaFrame
             this.bt_PointConfig_ShowPV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bt_PointConfig_ShowPV.FillColorGradient = true;
             this.bt_PointConfig_ShowPV.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_PointConfig_ShowPV.Location = new System.Drawing.Point(61, 13);
+            this.bt_PointConfig_ShowPV.Location = new System.Drawing.Point(61, 4);
             this.bt_PointConfig_ShowPV.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PointConfig_ShowPV.MinimumSize = new System.Drawing.Size(1, 1);
             this.bt_PointConfig_ShowPV.Name = "bt_PointConfig_ShowPV";
             this.bt_PointConfig_ShowPV.Radius = 50;
-            this.bt_PointConfig_ShowPV.Size = new System.Drawing.Size(165, 68);
+            this.bt_PointConfig_ShowPV.Size = new System.Drawing.Size(165, 1);
             this.bt_PointConfig_ShowPV.Symbol = 61564;
             this.bt_PointConfig_ShowPV.TabIndex = 2;
             this.bt_PointConfig_ShowPV.Text = "显示实时数值";
@@ -4295,13 +4232,13 @@ namespace ScadaFrame
             this.tableLayoutPanelDB.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanelDB.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanelDB.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanelDB.Size = new System.Drawing.Size(1776, 768);
+            this.tableLayoutPanelDB.Size = new System.Drawing.Size(29, 0);
             this.tableLayoutPanelDB.TabIndex = 0;
             // 
             // uiPagination1
             // 
             this.uiPagination1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPagination1.Location = new System.Drawing.Point(5, 735);
+            this.uiPagination1.Location = new System.Drawing.Point(5, 6);
             this.uiPagination1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.uiPagination1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPagination1.Name = "uiPagination1";
@@ -4319,12 +4256,12 @@ namespace ScadaFrame
             this.uiDataGridViewFooter1.DataGridView = null;
             this.uiDataGridViewFooter1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridViewFooter1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridViewFooter1.Location = new System.Drawing.Point(4, 695);
+            this.uiDataGridViewFooter1.Location = new System.Drawing.Point(4, 4);
             this.uiDataGridViewFooter1.Margin = new System.Windows.Forms.Padding(4);
             this.uiDataGridViewFooter1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiDataGridViewFooter1.Name = "uiDataGridViewFooter1";
             this.uiDataGridViewFooter1.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
-            this.uiDataGridViewFooter1.Size = new System.Drawing.Size(1768, 30);
+            this.uiDataGridViewFooter1.Size = new System.Drawing.Size(21, 1);
             this.uiDataGridViewFooter1.TabIndex = 1;
             this.uiDataGridViewFooter1.Text = "uiDataGridViewFooter1";
             this.uiDataGridViewFooter1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -4431,20 +4368,20 @@ namespace ScadaFrame
             // 
             this.uiDataGridViewActualAlarm.AllowUserToAddRows = false;
             this.uiDataGridViewActualAlarm.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.uiDataGridViewActualAlarm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.uiDataGridViewActualAlarm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.uiDataGridViewActualAlarm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uiDataGridViewActualAlarm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiDataGridViewActualAlarm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.uiDataGridViewActualAlarm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewActualAlarm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewActualAlarm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.uiDataGridViewActualAlarm.ColumnHeadersHeight = 32;
             this.uiDataGridViewActualAlarm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridViewActualAlarm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -4457,14 +4394,14 @@ namespace ScadaFrame
             this.ColumnActualAlarmVaule,
             this.ColumnActualConfirm});
             this.uiDataGridViewActualAlarm.ContextMenuStrip = this.CMS_ActualAlarm;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(234)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewActualAlarm.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(234)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridViewActualAlarm.DefaultCellStyle = dataGridViewCellStyle18;
             this.uiDataGridViewActualAlarm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridViewActualAlarm.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.uiDataGridViewActualAlarm.EnableHeadersVisualStyles = false;
@@ -4474,22 +4411,22 @@ namespace ScadaFrame
             this.uiDataGridViewActualAlarm.Name = "uiDataGridViewActualAlarm";
             this.uiDataGridViewActualAlarm.ReadOnly = true;
             this.uiDataGridViewActualAlarm.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewActualAlarm.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewActualAlarm.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.uiDataGridViewActualAlarm.RowHeadersVisible = false;
             this.uiDataGridViewActualAlarm.RowHeadersWidth = 51;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(234)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiDataGridViewActualAlarm.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(234)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiDataGridViewActualAlarm.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.uiDataGridViewActualAlarm.RowTemplate.Height = 23;
             this.uiDataGridViewActualAlarm.ScrollBarBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiDataGridViewActualAlarm.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -4619,45 +4556,45 @@ namespace ScadaFrame
             // 
             // uiDataGridView2
             // 
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.uiDataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.uiDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.uiDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridView2.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridView2.DefaultCellStyle = dataGridViewCellStyle23;
             this.uiDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiDataGridView2.EnableHeadersVisualStyles = false;
             this.uiDataGridView2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.uiDataGridView2.Location = new System.Drawing.Point(0, 0);
             this.uiDataGridView2.Name = "uiDataGridView2";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.uiDataGridView2.RowHeadersWidth = 51;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.uiDataGridView2.RowTemplate.Height = 23;
             this.uiDataGridView2.SelectedIndex = -1;
             this.uiDataGridView2.Size = new System.Drawing.Size(1947, 239);
@@ -4667,100 +4604,50 @@ namespace ScadaFrame
             // 
             // uiDataGridView1
             // 
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.uiDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle28;
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.Location = new System.Drawing.Point(3, 3);
             this.uiDataGridView1.Name = "uiDataGridView1";
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.uiDataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.uiDataGridView1.RowTemplate.Height = 23;
             this.uiDataGridView1.SelectedIndex = -1;
             this.uiDataGridView1.Size = new System.Drawing.Size(1668, 813);
             this.uiDataGridView1.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.TabIndex = 0;
             this.uiDataGridView1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiMarkLabel6
-            // 
-            this.uiMarkLabel6.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiMarkLabel6.Location = new System.Drawing.Point(27, 286);
-            this.uiMarkLabel6.Name = "uiMarkLabel6";
-            this.uiMarkLabel6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.uiMarkLabel6.Size = new System.Drawing.Size(141, 23);
-            this.uiMarkLabel6.TabIndex = 10;
-            this.uiMarkLabel6.Text = "数值轴颜色选择";
-            this.uiMarkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiMarkLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiColorPicker2
-            // 
-            this.uiColorPicker2.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
-            this.uiColorPicker2.FillColor = System.Drawing.Color.White;
-            this.uiColorPicker2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiColorPicker2.Location = new System.Drawing.Point(224, 286);
-            this.uiColorPicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiColorPicker2.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiColorPicker2.Name = "uiColorPicker2";
-            this.uiColorPicker2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiColorPicker2.Size = new System.Drawing.Size(150, 29);
-            this.uiColorPicker2.TabIndex = 14;
-            this.uiColorPicker2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiColorPicker2.Watermark = "";
-            this.uiColorPicker2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolButton1
-            // 
-            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton1.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.uiSymbolButton1.FillColor2 = System.Drawing.Color.CornflowerBlue;
-            this.uiSymbolButton1.FillColorGradient = true;
-            this.uiSymbolButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton1.Location = new System.Drawing.Point(23, 640);
-            this.uiSymbolButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton1.Name = "uiSymbolButton1";
-            this.uiSymbolButton1.Radius = 30;
-            this.uiSymbolButton1.Size = new System.Drawing.Size(342, 54);
-            this.uiSymbolButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolButton1.Symbol = 57602;
-            this.uiSymbolButton1.SymbolColor = System.Drawing.Color.WhiteSmoke;
-            this.uiSymbolButton1.TabIndex = 13;
-            this.uiSymbolButton1.Text = "载入文件";
-            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.uiSymbolButton1.Click += new System.EventHandler(this.bt_HistoryRecode_Change_Click);
             // 
             // Form1
             // 
@@ -4816,10 +4703,6 @@ namespace ScadaFrame
             this.tableLayoutPanel23.ResumeLayout(false);
             this.uiTabControlHistoryRecode.ResumeLayout(false);
             this.tabPageHistoryRecodeSet.ResumeLayout(false);
-            this.tabPageHistoryRecodeCollect.ResumeLayout(false);
-            this.tableLayoutPanel24.ResumeLayout(false);
-            this.tableLayoutPanel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiDataGridViewHistoryRecode)).EndInit();
             this.tabPageAlarm.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
@@ -5111,12 +4994,10 @@ namespace ScadaFrame
         private Sunny.UI.UITabControl uiTabControlHistoryRecode;
         private System.Windows.Forms.TabPage tabPageHistoryRecodeSet;
         private Sunny.UI.UITextBox uiTextBox2;
-        private Sunny.UI.UIColorPicker uiColorPicker1;
-        private Sunny.UI.UICheckBox CB_HistoryRecodeShowAlarmZone;
-        private Sunny.UI.UICheckBox CB_HistoryRecodeAlarmLine;
-        private Sunny.UI.UICheckBox uiCheckBox1;
-        private Sunny.UI.UICheckBox CB_HistoryRecodeShowAxis;
-        private Sunny.UI.UIComboBox uiComboBoxHistoryRecodeSelect;
+        private Sunny.UI.UIColorPicker clrpk_curveColor;
+        private Sunny.UI.UICheckBox ckb_HistoryRecodeAlarmLine;
+        private Sunny.UI.UICheckBox ckb_showCurve;
+        private Sunny.UI.UIComboBox cbx_HistoryRecodeSelect;
         private Sunny.UI.UIMarkLabel uiMarkLabel4;
         private Sunny.UI.UIMarkLabel uiMarkLabel2;
         private Sunny.UI.UIMarkLabel uiMarkLabel5;
@@ -5126,18 +5007,15 @@ namespace ScadaFrame
         private Sunny.UI.UIDatetimePicker DTP_HistoryRecodeStart;
         private System.Windows.Forms.TabPage tabPageHistoryRecodeCollect;
         private Sunny.UI.UISymbolButton bt_HistoryRecode_Change;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
-        private Sunny.UI.UISymbolButton uiSymbolButton2;
-        private Sunny.UI.UISymbolButton uiSymbolButton5;
-        private Sunny.UI.UISymbolButton uiSymbolButton3;
-        private Sunny.UI.UISymbolButton uiSymbolButton4;
-        private Sunny.UI.UIDataGridView uiDataGridViewHistoryRecode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHistoryRecodeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHistoryRecodeConfig;
-        private Sunny.UI.UIColorPicker uiColorPicker2;
-        private Sunny.UI.UIMarkLabel uiMarkLabel6;
-        private Sunny.UI.UISymbolButton uiSymbolButton1;
+        private Sunny.UI.UISymbolButton bt_HistoryRecode_query;
+        private Sunny.UI.UISymbolButton bt_HistoryRecode_choseFile;
+        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UISymbolButton uiSymbolButton8;
+        private Sunny.UI.UISymbolButton bt_HistoryRecode_newFile;
+        private Sunny.UI.UISymbolButton bt_HistoryRecode_addToFile;
+        private Sunny.UI.UISymbolButton bt_HistoryRecode_Delet;
+        private Sunny.UI.UIComboBox cbx_HistoryRecodeAdd;
+        private Sunny.UI.UIMarkLabel uiMarkLabel3;
     }
 }
 
