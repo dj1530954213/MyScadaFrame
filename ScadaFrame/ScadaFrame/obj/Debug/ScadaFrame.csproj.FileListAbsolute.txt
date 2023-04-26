@@ -63,3 +63,4 @@ D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\obj\Debug\ScadaFrame.csproj.C
 D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\HslControls.dll
 D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\HslControls.pdb
 D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\bin\Debug\HslControls.xml
+D:\GIT\Git\Code\MyScadaFrame\ScadaFrame\ScadaFrame\obj\Debug\ScadaFrame.csproj.SuggestedBindingRedirects.cache

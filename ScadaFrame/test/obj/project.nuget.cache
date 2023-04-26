@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vhnoKjUFlf8VL3BlRK8P3URmxoNdc6aXh/WNL1KqzGaNyVuZ0aZB+Dg5N/SPIRdrDX52QOtm8IYZWuzKk3lQTA==",
+  "dgSpecHash": "loWP5aNr0RHEDajCI0/ySHYVL/hS0vujRi0Fidd2exgB52cxNhmFISu5pGBvpRpwIVyu+/rDtDLOjiktNjKBRQ==",
   "success": true,
   "projectFilePath": "D:\\GIT\\Git\\Code\\MyScadaFrame\\ScadaFrame\\test\\test.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DJ\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }

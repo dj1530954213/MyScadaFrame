@@ -1,4 +1,5 @@
-﻿using Sunny.UI;
+﻿using HslControls;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -102,7 +103,7 @@ namespace ScadaFrame
         public Dictionary<string[], List<object>> devicePareDictionary = new Dictionary<string[], List<object>>();
         public Dictionary<string, int> deviceNum = new Dictionary<string, int>();
         public Dictionary<string, HistoryRecodePoint> historyRecodePointCollect = new Dictionary<string, HistoryRecodePoint>();
-        public Dictionary<string,string[]> historyRecodeItemsPare = new Dictionary<string,string[]>();
+        public Dictionary<string, string[]> historyRecodeItemsPare = new Dictionary<string, string[]>();
         public sqlhandle sqlhandle;
         public List<AlarmRecode> alarmRecodes = new List<AlarmRecode>();
         //public SiemensPLC siemensPLC = new SiemensPLC();
@@ -1196,7 +1197,7 @@ namespace ScadaFrame
                 using (StreamReader CSVreader = new StreamReader(openFileDialog.FileName, Encoding.Default))
                 {
                     CSVreader.ReadLine();//略过标题行
-                    while(true)
+                    while (true)
                     {
                         string IOstring = CSVreader.ReadLine();
                         if (IOstring == null)//如果最后一行
@@ -1204,7 +1205,7 @@ namespace ScadaFrame
                             break;
                         }
                         string[] result = IOstring.Split(',');
-                        historyRecodeItemsPare.Add(result[0],result);//将参数添加至字典中等待后续处理
+                        historyRecodeItemsPare.Add(result[0], result);//将参数添加至字典中等待后续处理
                     }
                     CSVreader.Close();
                 }
@@ -1227,7 +1228,7 @@ namespace ScadaFrame
             cbx_HistoryRecodeAdd.Items.Clear();//多次打开配置文件时需要清除上一次写入的新增点表下拉框中的原始数据
             for (int i = 0; i < uiDataGridViewDB.RowCount - 1; i++)
             {
-                if (uiDataGridViewDB.Rows[i].Cells[3].Value.ToString()!="BOOL")//bool量不允许进行历史值存储,通过报警记录就可以查看状态无需再记录历史数据
+                if (uiDataGridViewDB.Rows[i].Cells[3].Value.ToString() != "BOOL")//bool量不允许进行历史值存储,通过报警记录就可以查看状态无需再记录历史数据
                 {
                     cbx_HistoryRecodeAdd.Items.Add(uiDataGridViewDB.Rows[i].Cells[0].Value.ToString());
                 }
@@ -1350,6 +1351,54 @@ namespace ScadaFrame
             {
                 SaveHistoryRecodeConfig();
             }
+        }
+
+        private void bt_HistoryRecode_query_Click(object sender, EventArgs e)
+        {
+            historyRecodePointCollect.Clear();//当再次查询的时候需要清除当前字典内的所有值
+            //获取当前字典内的点位信息执行多次查询
+            foreach (var item in historyRecodeItemsPare)
+            {
+                string sqlValueStr = $"SELECT * from historyRecode where pointName = '{item.Value[0]}' and recodeTime BETWEEN '{DTP_HistoryRecodeStart.Text}' and '{DTP_HistoryRecodeStop.Text}'";
+                IDataReader readerValue = sqlhandle.read(sqlValueStr);
+                List<float> value = new List<float>();
+                while (readerValue.Read())
+                {
+                    value.Add(Convert.ToSingle(readerValue["value"]));
+                }
+                readerValue.Close();
+                readerValue.Dispose();
+                string[] colourStr = item.Value[1].Split('-');
+                int[] colourValue = colourStr.Select(x => Convert.ToInt32(x)).ToArray();//使用linq进行字符串数组向整形数组的转换
+                var currentPoint = (from p in deviceDictionary.Values where p.PointDictionary.ContainsKey(item.Value[0]) select p.PointDictionary[item.Value[0]]);//使用linq查询字典中的点表内包含当前查询的点，并返回这个点的实例
+                historyRecodePointCollect.Add(item.Value[0], new HistoryRecodePoint(item.Value[0], Convert.ToBoolean(item.Value[2]), Color.FromArgb(colourValue[0], colourValue[1], colourValue[2], colourValue[3]), Convert.ToBoolean(item.Value[3]), value.ToArray(), currentPoint.ToArray()[0]));//按照当前的配置表生成对应的历史曲线参数并将其添加至字典中
+            }
+            //获取对应时间
+            string sqlTimeStr = $"SELECT * FROM historyRecode where recodeTime BETWEEN '{DTP_HistoryRecodeStart.Text}' AND  '{DTP_HistoryRecodeStop.Text}'";
+            IDataReader readeTimer = sqlhandle.read(sqlTimeStr);
+            List<DateTime> dateTimes = new List<DateTime>();
+            while (readeTimer.Read())
+            {
+                dateTimes.Add(Convert.ToDateTime(readeTimer["recodeTime"]));
+            }
+            var qurey = from t in dateTimes orderby t select t;
+            DateTime[] resultTimes = qurey.ToArray();
+            //初始化
+            hslCurveHistory.RemoveAllCurve();
+            hslCurveHistory.RemoveAllAuxiliary();
+            //将曲线显示至画面中
+            foreach (var item in historyRecodePointCollect)
+            {
+                item.Value.addToCurve(ref hslCurveHistory);
+            }
+            hslCurveHistory.SetDateTimes(resultTimes);
+            hslCurveHistory.RenderCurveUI();
+        }
+        private void BT_xAlixRange_Click_1(object sender, EventArgs e)
+        {
+            hslCurveHistory.ReferenceAxisLeft.Max = Convert.ToInt32(yAxisLeftMax.Text);
+            hslCurveHistory.ReferenceAxisLeft.Min = Convert.ToInt32(yAxisLeftMin.Text);
+            hslCurveHistory.RenderCurveUI();
         }
     }
 }

@@ -74,10 +74,11 @@ namespace ScadaFrame
             get { return _pointPare; }
             set { _pointPare = value; }
         }
+
         public void addToCurve(ref HslCurveHistory hslCurveHistory)
         {
             //hslCurveHistory.ReferenceAxis.
-            hslCurveHistory.SetLeftCurve(PointName, ValueRecode, CurveColor, CurveStyle.Curve, $"{0:F3} {PointPare.unit}");//添加或更改曲线
+            hslCurveHistory.SetLeftCurve(PointName, ValueRecode, CurveColor, CurveStyle.Curve, "{0:F3}"+ $"{PointPare.unit}");//添加或更改曲线
             if (ShowAlarmLine)//增加报警辨识辅助线
             {
                 hslCurveHistory.AddLeftAuxiliary(PointPare.hhAlarm, Color.Red, 1f, true);
